@@ -33,7 +33,7 @@ function highlights.custom()
     HintFloat = { fg = colors.green, bg = colors.bg3 }
   }
 
-  if vim.g.gruvbox_material_diagnostic_text_highlight then
+  if vim.g.gruvbox_material_diagnostic_text_highlight == 1 then
     syntax.ErrorText = { fg = colors.bg_visual_red, style = 'undercurl' }
     syntax.WarningText = { fg = colors.bg_visual_yellow, style = 'undercurl' }
     syntax.InfoText = { fg = colors.bg_visual_blue, style = 'undercurl' }
@@ -45,7 +45,7 @@ function highlights.custom()
     syntax.HintText = { style = 'undercurl' }
   end
 
-  if vim.g.transparent_background or vim.g.sign_column_background ~= 'default' then
+  if vim.g.transparent_background == 1 or vim.g.sign_column_background ~= 'default' then
     syntax.RedSign = { fg = colors.red }
     syntax.OrangeSign = { fg = colors.orange }
     syntax.YellowSign = { fg = colors.yellow }
@@ -115,7 +115,7 @@ function highlights.syntax()
     Ignore = { fg = colors.grey1 } -- left blank, hidden
   }
 
-  if vim.g.gruvbox_material_enable_italic then
+  if vim.g.gruvbox_material_enable_italic == 1 then
     syntax.Comment = { fg = colors.grey1, style = 'italic' } -- any comments
     syntax.SpecialComment = { fg = colors.grey1, style = 'italic' } -- special things inside a comment
     syntax.Todo = { fg = colors.purple, style = 'italic' } -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
