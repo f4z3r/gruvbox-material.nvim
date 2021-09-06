@@ -156,6 +156,7 @@ function highlights.highlight_groups()
 
     CursorLine = { bg = colors.bg1 },
     CursorColumn = { bg = colors.bg1 },
+    CursorLineNr = { fg = colors.grey1 },
 
     -- Diff mode
     DiffAdd = { bg = colors.bg_diff_green }, -- Added line
