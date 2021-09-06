@@ -111,6 +111,7 @@ function highlights.syntax()
     PreProc = { fg = colors.purple }, -- generic Preprocessor
     Include = { fg = colors.purple }, -- preprocessor #include
     Define = { fg = colors.purple }, -- preprocessor #define
+    Identifier = { fg = colors.blue },
     Macro = { fg = colors.aqua }, -- same as Define
     PreCondit = { fg = colors.purple }, -- preprocessor #if, #else, #endif, etc.
     Special = { fg = colors.yellow }, -- any special symbol
