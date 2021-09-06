@@ -53,3 +53,23 @@ colorscheme gruvbox-material
 ```
 
 ## Configuration
+
+This is an example of the function with the default values.
+
+
+Lua:
+
+```
+vim.g.gruvbox_material_enable_italic_comment = 1
+
+require('gruvbox-material').setup()
+
+```
+
+Vim script:
+
+```
+let g:gruvbox_material_enable_italic_comment = 1
+
+colorscheme gruvbox-material
+```
