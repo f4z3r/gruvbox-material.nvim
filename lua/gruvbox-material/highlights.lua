@@ -115,6 +115,7 @@ function highlights.syntax()
     PreCondit = { fg = colors.purple }, -- preprocessor #if, #else, #endif, etc.
     Special = { fg = colors.yellow }, -- any special symbol
     SpecialChar = { fg = colors.yellow }, -- special character in a constant
+    Function = { fg = colors.green }, -- special character in a constant
     Tag = { fg = colors.orange }, -- you can use CTRL-] on this
     Delimiter = { fg = colors.fg0 }, -- character that needs attention like , or .
     QuickFixLine = { fg = colors.purple, style = 'bold' }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
@@ -343,6 +344,16 @@ function highlights.filetype_specific()
     helpSpecial = { link = 'Blue' },
     helpSectionDelim = { link = 'Grey' },
 
+    -- gitcommit
+    gitcommitSummary = { link = 'Red' },
+    gitcommitUntracked = { link = 'Grey' },
+    gitcommitDiscarded = { link = 'Grey' },
+    gitcommitSelected = { link = 'Grey' },
+    gitcommitUnmerged = { link = 'Grey' },
+    gitcommitOnBranch = { link = 'Grey' },
+    gitcommitArrow = { link = 'Grey' },
+    gitcommitFile = { link = 'Green' },
+
     -- diff
     diffAdded = { link = 'Green' },
     diffRemoved = { link = 'Red' },
@@ -509,8 +520,25 @@ function highlights.plugin_specific()
     SyntasticErrorSign = { link = 'RedSign' },
     SyntasticWarningSign = { link = 'YellowSign' },
     SyntasticErrorLine = { link = 'ErrorLine' },
-    SyntasticWarningLine = { link = 'WarningLine' },
+    SyntasticWarningLine = { link = 'warningline' },
 
+    -- junegunn/vim-plug
+    plug1 = { fg = colors.orange, style = 'bold' },
+    plugNumber = {fg = colors.yellow, style = 'bold'},
+    plug2 = { link = 'Green' },
+    plugBracket = { link = 'Grey' },
+    plugName = { link = 'Aqua' },
+    plugDash = { link = 'Orange' },
+    plugError = { link = 'Red' },
+    plugNotLoaded = { link = 'Grey' },
+    plugRelDate = { link = 'Grey' },
+    plugH2 = { link = 'Orange' },
+    plugMessage = { link = 'Orange' },
+    plugStar = { link = 'Red' },
+    plugUpdate = { link = 'Blue' },
+    plugDeleted = { link = 'Grey' },
+    plugEdge = { link = 'Yellow' },
+    plugSha = { link = 'Green' }
   }
 
   -- Yggdroot/indentLine
