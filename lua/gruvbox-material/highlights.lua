@@ -504,6 +504,21 @@ function highlights.plugin_specific()
     UndotreeSeq = { link = 'Green' },
     UndotreeTimeStamp = { link = 'Grey' },
 
+    -- liuchengxu/vista.vim
+    VistaBracket = { link = 'Grey' },
+    VistachildrenNr = { link = 'Orange' },
+    VistaScope = { link = 'Red' },
+    VistaTag = { link = 'Green' },
+    VistaPrefix = { link = 'Grey' },
+    VistaIcon = { link = 'Orange' },
+    VistaScopeKind = { link = 'Yellow' },
+    VistaColon = { link = 'Grey' },
+    VistaLineNr = { link = 'Grey' },
+    VistaHeadNr = { link = 'Fg' },
+    VistaPublic = { link = 'Green' },
+    VistaProtected = { link = 'Yellow' },
+    VistaPrivate = { link = 'Red' },
+
     -- airblade/vim-gitgutter
     GitGutterAdd = { link = 'GreenSign' },
     GitGutterChange = { link = 'BlueSign' },
