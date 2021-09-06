@@ -7,7 +7,7 @@ function M.setup()
   if vim.fn.exists('syntax_on') then vim.cmd('syntax reset') end
   vim.o.background = "dark"
   vim.o.termguicolors = true
-  -- vim.g.colors_name = "gruvbox-material"
+  vim.g.colors_name = "gruvbox-material"
   
   -- NOTE: I think we can refactor this, but I don't know how
   for group, colors in pairs(highlights.custom()) do
@@ -30,7 +30,7 @@ function M.setup()
     utils.highlight(group, colors)
   end
 
-  for group, colors in pairs(highlights.plugins_specific()) do
+  for group, colors in pairs(highlights.plugin_specific()) do
     utils.highlight(group, colors)
   end
 end
