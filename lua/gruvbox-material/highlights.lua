@@ -45,6 +45,30 @@ function highlights.custom()
     syntax.HintText = { style = 'undercurl' }
   end
 
+  if vim.g.gruvbox_material_diagnostic_line_highlight == 1 then
+    syntax.ErrorLine = { fg = colors.bg_visual_red }
+    syntax.WarningLine = { fg = colors.bg_visual_yellow }
+    syntax.InfoLine = { fg = colors.bg_visual_blue }
+    syntax.HintLine = { fg = colors.bg_visual_green }
+  else
+    vim.cmd('highlight clear ErrorLine')
+    vim.cmd('highlight clear WarningLine')
+    vim.cmd('highlight clear InfoLine')
+    vim.cmd('highlight clear HintLine')
+  end
+
+  if vim.g.gruvbox_material_diagnostic_virtual_text == 'grey' then
+    syntax.VirtualTextError = { link = 'Grey' }
+    syntax.VirtualTextWarning = { link = 'Grey' }
+    syntax.VirtualTextInfo = { link = 'Grey' }
+    syntax.VirtualTextHint = { link = 'Grey' }
+  else
+    syntax.VirtualTextError = { link = 'Error' }
+    syntax.VirtualTextWarning = { link = 'Warning' }
+    syntax.VirtualTextInfo = { link = 'Info' }
+    syntax.VirtualTextHint = { link = 'Hint' }
+  end
+
   if vim.g.transparent_background == 1 or vim.g.sign_column_background ~= 'default' then
     syntax.RedSign = { fg = colors.red }
     syntax.OrangeSign = { fg = colors.orange }
@@ -61,18 +85,6 @@ function highlights.custom()
     syntax.AquaSign = { fg = colors.aqua, bg = colors.bg2 }
     syntax.BlueSign = { fg = colors.blue, bg = colors.bg2 }
     syntax.PurpleSign = { fg = colors.purple, bg = colors.bg2 }
-  end
-
-  if vim.g.diagnostic_virtual_text == 'grey' then
-    syntax.VirtualTextError = { link = 'Grey' }
-    syntax.VirtualTextWarning = { link = 'Grey' }
-    syntax.VirtualTextInfo = { link = 'Grey' }
-    syntax.VirtualTextHint = { link = 'Grey' }
-  else
-    syntax.VirtualTextError = { link = 'Error' }
-    syntax.VirtualTextWarning = { link = 'Warning' }
-    syntax.VirtualTextInfo = { link = 'Info' }
-    syntax.VirtualTextHint = { link = 'Hint' }
   end
 
   return syntax
@@ -115,7 +127,7 @@ function highlights.syntax()
     Ignore = { fg = colors.grey1 } -- left blank, hidden
   }
 
-  if vim.g.gruvbox_material_enable_italic == 1 then
+  if vim.g.gruvbox_material_enable_italic_comment == 1 then
     syntax.Comment = { fg = colors.grey1, style = 'italic' } -- any comments
     syntax.SpecialComment = { fg = colors.grey1, style = 'italic' } -- special things inside a comment
     syntax.Todo = { fg = colors.purple, style = 'italic' } -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
@@ -261,18 +273,6 @@ function highlights.filetype_specific()
     markdownBold = { style = 'bold' },
     markdownItalicDelimiter = { fg = colors.grey1, style = 'italic' },
 
-    -- help
-    helpNote = { fg = colors.purple, style = 'bold' },
-    helpHeadline = { fg = colors.red, style = 'bold' },
-    helpHeader = { fg = colors.orange, style = 'bold' },
-    helpURL = { fg = colors.green, style = 'underline' },
-    helpHyperTextEntry = { fg = colors.yellow, style = 'bold' },
-    helpHyperTextJump = { link = 'Yellow' },
-    helpCommand = { link = 'Aqua' },
-    helpExample = { link = 'Green' },
-    helpSpecial = { link = 'Blue' },
-    helpSectionDelim = { link = 'Grey' },
-
     -- ruby
     rubyKeywordAsMethod = { link = 'Green' },
     rubyInterpolation = { link = 'Yellow' },
@@ -330,6 +330,29 @@ function highlights.filetype_specific()
     makeSpecTarget = { link = 'Yellow' },
     makeTarget = { link = 'Blue' },
     makeCommands = { link = 'Orange' },
+
+    -- help
+    helpNote = { fg = colors.purple, style = 'bold' },
+    helpHeadline = { fg = colors.red, style = 'bold' },
+    helpHeader = { fg = colors.orange, style = 'bold' },
+    helpURL = { fg = colors.green, style = 'underline' },
+    helpHyperTextEntry = { fg = colors.yellow, style = 'bold' },
+    helpHyperTextJump = { link = 'Yellow' },
+    helpCommand = { link = 'Aqua' },
+    helpExample = { link = 'Green' },
+    helpSpecial = { link = 'Blue' },
+    helpSectionDelim = { link = 'Grey' },
+
+    -- diff
+    diffAdded = { link = 'Green' },
+    diffRemoved = { link = 'Red' },
+    diffChanged = { link = 'Blue' },
+    diffOldFile = { link = 'Yellow' },
+    diffNewFile = { link = 'Orange' },
+    diffFile = { link = 'Aqua' },
+    diffLine = { link = 'Grey' },
+    diffIndexLine = { link = 'Purple' }
+
   }
 
   return syntax
@@ -401,7 +424,7 @@ function highlights.treesitter()
   return syntax
 end
 
-function highlights.plugins_specific()
+function highlights.plugin_specific()
   local syntax = {
     -- nvim-telescope/telescope.nvim
     TelescopeBorder = { link = 'Grey' },
@@ -478,8 +501,21 @@ function highlights.plugins_specific()
     SignifySignAdd = { link = 'GreenSign' },
     SignifySignChange = { link = 'BlueSign' },
     SignifySignDelete = { link = 'RedSign' },
-    SignifySignChangeDelete = { link = 'PurpleSign' }
+    SignifySignChangeDelete = { link = 'PurpleSign' },
+
+    -- vim-syntastic/syntastic
+    SyntasticError = { link = 'ErrorText' },
+    SyntasticWarning = { link = 'WarningText' },
+    SyntasticErrorSign = { link = 'RedSign' },
+    SyntasticWarningSign = { link = 'YellowSign' },
+    SyntasticErrorLine = { link = 'ErrorLine' },
+    SyntasticWarningLine = { link = 'WarningLine' },
+
   }
+
+  -- Yggdroot/indentLine
+  vim.g.indentLine_color_gui = colors.bg5
+  vim.g.indentLine_color_term = colors.term.bg5
 
   -- mg979/vim-visual-multi
   vim.g.VM_Cursor_hl = 'Cursor'
@@ -494,3 +530,4 @@ return highlights
 
 -- TODO:
 -- 1. Need to add fzf.vim but config for this plugin wrote in vim, how to convert it for lua?
+
