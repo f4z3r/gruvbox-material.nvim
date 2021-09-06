@@ -36,7 +36,11 @@ local colors = {
   bg_visual_red = '#4c3432',
   bg_visual_blue = '#374141',
   bg_visual_yellow = '#4f422e',
-  bg_current_word = '#3c3836'
+  bg_current_word = '#3c3836',
+
+  term = {
+    bg5 = 239
+  }
 }
 
 return colors
