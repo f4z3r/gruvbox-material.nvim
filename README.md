@@ -17,7 +17,9 @@ Gruvbox Material is a modified version of Gruvbox, the contrast is adjusted to b
   - [Startify](https://github.com/mhinz/vim-startify)
   - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
   - [undotree](https://github.com/mbbill/undotree)
-
+  - [Vista.vim](https://github.com/liuchengxu/vista.vim)
+  - etc..
+  
 Please feel free to open an issue if you want some features or other plugins to be included.
 
 ## Install
