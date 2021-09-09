@@ -1,6 +1,7 @@
 local colors = require('gruvbox-material.colors')
 
--- TODO: Change CursorLine
+local g = vim.g
+local opt = vim.opt
 
 highlights = {}
 
@@ -33,7 +34,7 @@ function highlights.custom()
     HintFloat = { fg = colors.green, bg = colors.bg3 }
   }
 
-  if vim.g.gruvbox_material_diagnostic_text_highlight == 1 then
+  if g.gruvbox_material_diagnostic_text_highlight == 1 then
     syntax.ErrorText = { fg = colors.bg_visual_red, style = 'undercurl' }
     syntax.WarningText = { fg = colors.bg_visual_yellow, style = 'undercurl' }
     syntax.InfoText = { fg = colors.bg_visual_blue, style = 'undercurl' }
@@ -45,7 +46,7 @@ function highlights.custom()
     syntax.HintText = { style = 'undercurl' }
   end
 
-  if vim.g.gruvbox_material_diagnostic_line_highlight == 1 then
+  if g.gruvbox_material_diagnostic_line_highlight == 1 then
     syntax.ErrorLine = { fg = colors.bg_visual_red }
     syntax.WarningLine = { fg = colors.bg_visual_yellow }
     syntax.InfoLine = { fg = colors.bg_visual_blue }
@@ -57,7 +58,7 @@ function highlights.custom()
     vim.cmd('highlight clear HintLine')
   end
 
-  if vim.g.gruvbox_material_diagnostic_virtual_text == 'grey' then
+  if g.gruvbox_material_diagnostic_virtual_text == 'grey' then
     syntax.VirtualTextError = { link = 'Grey' }
     syntax.VirtualTextWarning = { link = 'Grey' }
     syntax.VirtualTextInfo = { link = 'Grey' }
@@ -69,7 +70,7 @@ function highlights.custom()
     syntax.VirtualTextHint = { link = 'Hint' }
   end
 
-  if vim.g.transparent_background == 1 or vim.g.sign_column_background ~= 'default' then
+  if g.transparent_background == 1 or g.sign_column_background ~= 'default' then
     syntax.RedSign = { fg = colors.red }
     syntax.OrangeSign = { fg = colors.orange }
     syntax.YellowSign = { fg = colors.yellow }
@@ -129,7 +130,7 @@ function highlights.syntax()
     Ignore = { fg = colors.grey1 } -- left blank, hidden
   }
 
-  if vim.g.gruvbox_material_enable_italic_comment == 1 then
+  if g.gruvbox_material_enable_italic_comment == 1 then
     syntax.Comment = { fg = colors.grey1, style = 'italic' } -- any comments
     syntax.SpecialComment = { fg = colors.grey1, style = 'italic' } -- special things inside a comment
     syntax.Todo = { fg = colors.purple, style = 'italic' } -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
@@ -205,7 +206,7 @@ function highlights.highlight_groups()
 
     StatusLine = { fg = colors.fg1, bg = colors.bg_statusline1 }, -- status line of current window
     StatusLineTerm = { link = 'StatusLine' }, -- status line of current :terminal window
-    StatusLineNC = { fg = colors.grey1, bg = colors.bg_statusline1 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    StatusLineNC = { fg = colors.fg1, bg = colors.bg_statusline1 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     StatusLineTermNC = { link = 'StatusLineNC' }, -- status line of non-current :terminal window
     TabLine = { fg = colors.fg1, bg = colors.bg_statusline3 },
     TabLineFill = { fg = colors.fg1, bg = colors.bg_statusline1 },
@@ -252,7 +253,7 @@ function highlights.highlight_groups()
     TermCursor = { link = 'Cursor' },
     healthError = { link = 'Error' },
     healthSuccess = { link = 'Success' },
-    healthWarning = { link = 'Warning' }
+    healthWarning = { link = 'Warning' },
   }
 
   return syntax
@@ -531,6 +532,33 @@ function highlights.plugin_specific()
     SignifySignDelete = { link = 'RedSign' },
     SignifySignChangeDelete = { link = 'PurpleSign' },
 
+    -- phaazon/hop.nvim
+    HopNextKey = { fg = colors.orange, style = 'bold' },
+    HopNextKey1 = { fg = colors.green, style = 'bold' },
+    HopNextKey2 = { link = 'Green' },
+    HopUnmatched = { link = 'Grey' },
+
+    -- lukas-reineke/indent-blankline.nvim
+    IndentBlanklineContextChar = { link = 'CursorLineNr' },
+    IndentBlanklineChar = { link = 'LineNr' },
+    IndentBlanklineSpaceChar = { link = 'LineNr' },
+    IndentBlanklineSpaceCharBlankline = { link = 'LineNr' },
+
+    -- liuchengxu/vim-which-key
+    WhichKey = { link = 'Red' },
+    WhichKeySeperator = { link = 'Green' },
+    WhichKeyGroup = { link = 'Yellow' },
+    WhichKeyDesc = { link = 'Blue' },
+
+    -- p00f/nvim-ts-rainbow
+    rainbowcol1 = { link = 'Red' },
+    rainbowcol2 = { link = 'Orange' },
+    rainbowcol3 = { link = 'Yellow' },
+    rainbowcol4 = { link = 'Green' },
+    rainbowcol5 = { link = 'Aqua' },
+    rainbowcol6 = { link = 'Blue' },
+    rainbowcol7 = { link = 'Purple' },
+
     -- vim-syntastic/syntastic
     SyntasticError = { link = 'ErrorText' },
     SyntasticWarning = { link = 'WarningText' },
@@ -559,14 +587,14 @@ function highlights.plugin_specific()
   }
 
   -- Yggdroot/indentLine
-  vim.g.indentLine_color_gui = colors.bg5
-  vim.g.indentLine_color_term = colors.term.bg5
+  g.indentLine_color_gui = colors.bg5
+  g.indentLine_color_term = colors.term.bg5
 
   -- mg979/vim-visual-multi
-  vim.g.VM_Cursor_hl = 'Cursor'
-  vim.g.VM_Extend_hl = 'Visual'
-  vim.g.VM_Insert_hl = 'Cursor'
-  vim.g.VM_Mono_hl = 'Cursor'
+  g.VM_Cursor_hl = 'Cursor'
+  g.VM_Extend_hl = 'Visual'
+  g.VM_Insert_hl = 'Cursor'
+  .g.VM_Mono_hl = 'Cursor'
 
   return syntax
 end
