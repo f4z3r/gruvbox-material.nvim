@@ -594,7 +594,7 @@ function highlights.plugin_specific()
   g.VM_Cursor_hl = 'Cursor'
   g.VM_Extend_hl = 'Visual'
   g.VM_Insert_hl = 'Cursor'
-  .g.VM_Mono_hl = 'Cursor'
+  g.VM_Mono_hl = 'Cursor'
 
   return syntax
 end
