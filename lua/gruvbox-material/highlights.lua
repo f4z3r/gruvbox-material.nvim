@@ -1,4 +1,8 @@
-local colors = require('gruvbox-material.colors')
+local g_colors = require('gruvbox-material.colors')
+local colors = g_colors.dark
+if vim.o.background == "light" then
+  colors = g_colors.light
+end
 
 local g = vim.g
 local opt = vim.opt

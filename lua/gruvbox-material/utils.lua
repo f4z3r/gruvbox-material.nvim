@@ -1,4 +1,4 @@
-utils = {}
+local utils = {}
 
 function utils.highlight(group, color)
   local fg = color.fg or "NONE"
