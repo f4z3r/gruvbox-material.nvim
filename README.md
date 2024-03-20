@@ -1,5 +1,9 @@
 # Gruvbox Material Scheme
 
+> [!NOTE]
+> This is a continuation of the original work from WittyJudge:
+> https://github.com/WIttyJudge/gruvbox-material.nvim
+
 THIS IS IN DEVELOPEMENT FOR NOW
 
 A port of [gruvbox-material](https://github.com/sainnhe/gruvbox-material) colorscheme for Neovim
