@@ -1,0 +1,2 @@
+[lints]
+undefined_variable = "allow"

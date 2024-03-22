@@ -6,9 +6,9 @@ function utils.highlight(group, color)
   local sp = color.sp and "guisp=" .. color.sp or ""
   local style = color.style or "NONE"
 
+  -- TODO: move this to nvim API
   -- local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
-  local hl = string.format('highlight %s gui=%s guifg=%s guibg=%s %s', group,
-                           style, fg, bg, sp)
+  local hl = string.format("highlight %s gui=%s guifg=%s guibg=%s %s", group, style, fg, bg, sp)
 
   vim.cmd(hl)
 

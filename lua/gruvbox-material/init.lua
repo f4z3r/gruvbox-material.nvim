@@ -1,29 +1,29 @@
-local utils = require('gruvbox-material.utils')
-local highlights = require('gruvbox-material.highlights')
+local highlights = require("gruvbox-material.highlights")
+local utils = require("gruvbox-material.utils")
 
-local g = vim.g
-
-function set_default_global_options()
+local function set_default_global_options()
   local opts = {
     enable_italic_comment = 1,
     diagnostic_text_highlight = 0,
-    diagnostic_virtual_text = 'grey',
-    sign_column_background = 'none',
-    transparent_background = 0
+    diagnostic_virtual_text = "grey",
+    sign_column_background = "none",
+    transparent_background = 0,
   }
 
   for key, val in pairs(opts) do
     -- add prefix
-    local key = 'gruvbox_material_' .. key
+    local key = "gruvbox_material_" .. key
 
-    if vim.g[key] == nil then 
-      vim.g[key] = val 
+    if vim.g[key] == nil then
+      vim.g[key] = val
     end
   end
 end
 
-M = {}
-function M.setup(cfg)
+local gruvbox = {}
+
+function gruvbox.setup(cfg)
+  --TODO: use the configuration to configure the lua plugin
   if vim.g.loaded_gruvbox_material == 1 then
     return
   end
@@ -31,9 +31,9 @@ function M.setup(cfg)
 
   set_default_global_options()
 
-  vim.cmd('highlight clear')
-  if vim.fn.exists('syntax_on') then
-    vim.cmd('syntax reset')
+  vim.cmd("highlight clear")
+  if vim.fn.exists("syntax_on") then
+    vim.cmd("syntax reset")
   end
   vim.o.background = "dark"
   vim.o.termguicolors = true
@@ -64,5 +64,5 @@ function M.setup(cfg)
     utils.highlight(group, colors)
   end
 end
-return M
 
+return gruvbox
