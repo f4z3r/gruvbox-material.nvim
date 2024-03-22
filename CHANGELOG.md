@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fixes
+
+- Updates to [tree-sitter capture names](https://github.com/nvim-treesitter/nvim-treesitter/issues/2293#issuecomment-1900679583)
+
 ### Improvements
 
 - Code styling and linting with stylua and selene.
