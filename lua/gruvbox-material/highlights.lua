@@ -373,7 +373,6 @@ function highlights.filetype_specific()
   return syntax
 end
 
--- TODO: Add more description.
 -----------------------------------
 -- Tresitter specific highlights --
 -- :h nvim-treesitter-highlights --
@@ -434,6 +433,136 @@ function highlights.treesitter()
     TSUnderline = { style = "underline" },
     TSVariable = { link = "Fg" },
     TSVariableBuiltin = { link = "Blue" },
+
+    -- NOTE: changes due to new capture names (see:
+    -- https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights)
+
+    -- identifiers
+    ["@variable"] = { link = "Fg" },
+    ["@variable.builtin"] = { link = "Blue" },
+    ["@variable.parameter"] = { link = "@variable" },
+    ["@variable.parameter.builtin"] = { link = "@variable.builtin" },
+    ["@variable.member"] = { link = "@variable" },
+
+    ["@constant"] = { link = "Fg" },
+    ["@constant.builtin"] = { link = "Blue" },
+    ["@constant.macro"] = { link = "Blue" },
+
+    ["@module"] = { link = "Yellow" },
+    ["@module.builtin"] = { link = "Blue" },
+
+    ["@label"] = { link = "Orange" },
+
+    -- literals
+    ["@string"] = { link = "Aqua" },
+    ["@string.documentation"] = { link = "Comment" },
+    ["@string.regexp"] = { link = "Green" },
+    ["@string.escape"] = { link = "Green" },
+    ["@string.special"] = { link = "@string" },
+    ["@string.special.symbol"] = { link = "@string" },
+    ["@string.special.url"] = { link = "Yellow" },
+    ["@string.special.path"] = { link = "@string" },
+
+    ["@character"] = { link = "Aqua" },
+    ["@character.special"] = { link = "Aqua" },
+
+    ["@boolean"] = { link = "Boolean" },
+    ["@number"] = { link = "Purple" },
+    ["@number.float"] = { link = "@number" },
+
+    -- types
+    ["@type"] = { link = "Yellow" },
+    ["@type.builtin"] = { link = "@type" },
+    ["@type.definition"] = { link = "@type" },
+
+    ["@attribute"] = { link = "Purple" },
+    ["@attribute.builtin"] = { link = "@attribute" },
+    ["@property"] = { link = "Green" },
+
+    -- functions
+    ["@function"] = { link = "Green" },
+    ["@function.builtin"] = { link = "@function" },
+    ["@function.call"] = { link = "@function" },
+    ["@function.macro"] = { link = "@function" },
+
+    ["@function.method"] = { link = "Green" },
+    ["@function.method.call"] = { link = "@method" },
+
+    ["@constructor"] = { link = "Green" },
+    ["@operator"] = { link = "Orange" },
+
+    -- keywords
+    ["@keyword"] = { link = "Red" },
+    ["@keyword.coroutine"] = { link = "@keyword" },
+    ["@keyword.function"] = { link = "@keyword" },
+    ["@keyword.operator"] = { link = "Orange" },
+    ["@keyword.import"] = { link = "@keyword" },
+    ["@keyword.type"] = { link = "@keyword" },
+    ["@keyword.modifier"] = { link = "@keyword" },
+    ["@keyword.repeat"] = { link = "@keyword" },
+    ["@keyword.return"] = { link = "@keyword" },
+    ["@keyword.debug"] = { link = "@keyword" },
+    ["@keyword.exception"] = { link = "@keyword" },
+
+    ["@keyword.conditional"] = { link = "Red" },
+    ["@keyword.conditional.ternary"] = { link = "@keyword.conditional" },
+
+    ["@keyword.directive"] = { link = "Red" },
+    ["@keyword.directive.define"] = { link = "@keyword.directive" },
+
+    -- punctuation
+    ["@punctuation.delimiter"] = { link = "Grey" },
+    ["@punctuation.bracket"] = { link = "Fg" },
+    ["@punctuation.special"] = { link = "Blue" },
+
+    -- comments
+    ["@comment"] = { link = "Comment" },
+    ["@comment.documentation"] = { link = "Comment" },
+
+    ["@comment.error"] = { link = "Error" },
+    ["@comment.warning"] = { link = "Warning" },
+    ["@comment.todo"] = { link = "Todo" },
+    ["@comment.note"] = { link = "Info" },
+
+    -- markup
+    ["@markup.strong"] = { style = "bold" },
+    ["@markup.italic"] = { style = "italic" },
+    ["@markup.strikethrough"] = { link = "Grey" },
+    ["@markup.underline"] = { style = "underline" },
+
+    -- ["@markup.heading"] = {},
+    ["@markup.heading.1"] = { fg = colors.red, style = "bold" },
+    ["@markup.heading.2"] = { fg = colors.orange, style = "bold" },
+    ["@markup.heading.3"] = { fg = colors.yellow, style = "bold" },
+    ["@markup.heading.4"] = { fg = colors.green, style = "bold" },
+    ["@markup.heading.5"] = { fg = colors.blue, stlye = "bold" },
+    ["@markup.heading.6"] = { fg = colors.purple, style = "bold" },
+
+    ["@markup.quote"] = { link = "Grey" },
+    ["@markup.math"] = { link = "Blue" },
+
+    ["@markup.link"] = { fg = colors.blue },
+    ["@markup.link.label"] = { fg = colors.blue },
+    ["@markup.link.url"] = { fg = colors.blue, style = "italic" },
+
+    ["@markup.raw"] = { link = "Purple" },
+    ["@markup.raw.inline"] = { link = "Purple" },
+    ["@markup.raw.block"] = { link = "Purple" },
+
+    ["@markup.list"] = { link = "Orange" },
+    ["@markup.list.checked"] = { link = "Green" },
+    ["@markup.list.numbered"] = { link = "Aqua" },
+    ["@markup.list.unchecked"] = { link = "Red" },
+    ["@markup.list.unnumbered"] = { link = "Orange" },
+
+    ["@diff.plus"] = { link = "DiffAdd" },
+    ["@diff.minus"] = { link = "DiffDelete" },
+    ["@diff.delta"] = { link = "DiffChange" },
+
+    ["@tag"] = { link = "Orange" },
+    ["@tag.builtin"] = { link = "@tag" },
+    ["@tag.attribute"] = { link = "@tag" },
+    ["@tag.delimiter"] = { link = "Green" },
   }
 
   return syntax
