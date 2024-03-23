@@ -10,6 +10,11 @@
 
 - Code styling and linting with stylua and selene.
 
+### Changes
+
+- Docstrings that are actual strings (such as in Python) are now rendered like comments.
+- `TODO`/`NOTE`/`FIX`/`BUG`/... within comments are rendered according to warning levels.
+
 ## Release 0.1.0 - 2024-03-20
 
 Initial version from [WittyJudge](https://github.com/WIttyJudge).
