@@ -17,21 +17,38 @@ text*, ~~strikethrough~~, ***bold and italic***.
 > [!NOTE]
 > Sample GitHub style note
 
+- some
+- unnumbered
+- list
+- [ ] with checkbox
+- [x] that is checked
+
+1. Some numbered list
+2. Some numbered list
+
 ```
 Code without explicit language
 ```
 
+```diff
++["@string.escape"] = { link = "Yellow" },
+-["@string.escape"] = { link = "Green" },
+```
+
 ```lua
 local string = require("string")
+local CONSTANT = "test"
 ---docstring
 ---@param this string does stuff
 ---@return table
 function Object:new(this, that)
   self._this.do(true)
   if this then
-    -- comment
+    -- NOTE: comment
     b = a + c
-    print(type(string.gsub(that, "%b{} %d%s")) == nil and 1 or 1.12)
+    print(type(string.gsub(that, "%b{} \n%d%s")) == nil and 1 or 1.12)
+    string.format("%s=%d", this, that)
+
   end
 end
 ```
@@ -39,7 +56,7 @@ end
 ```python
 import module as m
 class Hello(abc.ABC):
-    # comment
+    # FIX: comment
     def test(self, other: str) -> int:
         """Docstring"""
         print(self.prop.method() == None and True or 1 || 1.23)
@@ -53,9 +70,9 @@ use clap:App;
 
 /// Some docstring
 fn main() -> Result<()> {
-    let yaml = load_yaml!("literal");
+    let yaml = load_yaml!("/path/to/some/file.png");
     let config = App:from_yaml(yaml).get_matches();
-    // some comment
+    // BUG: comment
     let val = match config.occurrences_of("this") {
         1 => Enum::Val1,
         _ => Enum::Val2,
