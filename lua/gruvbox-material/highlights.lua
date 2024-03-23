@@ -438,17 +438,17 @@ function highlights.treesitter()
     -- https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights)
 
     -- identifiers
-    ["@variable"] = { link = "Fg" },
-    ["@variable.builtin"] = { link = "Blue" },
+    ["@variable"] = { link = "Blue" },
+    ["@variable.builtin"] = { link = "@variable" },
     ["@variable.parameter"] = { link = "@variable" },
     ["@variable.parameter.builtin"] = { link = "@variable.builtin" },
     ["@variable.member"] = { link = "@variable" },
 
-    ["@constant"] = { link = "Fg" },
-    ["@constant.builtin"] = { link = "Blue" },
+    ["@constant"] = { link = "Green" },
+    ["@constant.builtin"] = { link = "Yellow" },
     ["@constant.macro"] = { link = "Blue" },
 
-    ["@module"] = { link = "Yellow" },
+    ["@module"] = { link = "Fg" },
     ["@module.builtin"] = { link = "Blue" },
 
     ["@label"] = { link = "Orange" },
@@ -481,9 +481,9 @@ function highlights.treesitter()
 
     -- functions
     ["@function"] = { link = "Green" },
-    ["@function.builtin"] = { link = "@function" },
+    ["@function.builtin"] = { link = "Yellow" },
     ["@function.call"] = { link = "@function" },
-    ["@function.macro"] = { link = "@function" },
+    ["@function.macro"] = { link = "Aqua" },
 
     ["@function.method"] = { link = "Green" },
     ["@function.method.call"] = { link = "@method" },
@@ -495,7 +495,7 @@ function highlights.treesitter()
     ["@keyword"] = { link = "Red" },
     ["@keyword.coroutine"] = { link = "@keyword" },
     ["@keyword.function"] = { link = "@keyword" },
-    ["@keyword.operator"] = { link = "Orange" },
+    ["@keyword.operator"] = { link = "@keyword" },
     ["@keyword.import"] = { link = "@keyword" },
     ["@keyword.type"] = { link = "@keyword" },
     ["@keyword.modifier"] = { link = "@keyword" },
@@ -511,7 +511,7 @@ function highlights.treesitter()
     ["@keyword.directive.define"] = { link = "@keyword.directive" },
 
     -- punctuation
-    ["@punctuation.delimiter"] = { link = "Grey" },
+    ["@punctuation.delimiter"] = { link = "Fg" },
     ["@punctuation.bracket"] = { link = "Fg" },
     ["@punctuation.special"] = { link = "Blue" },
 

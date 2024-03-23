@@ -6,11 +6,11 @@
 ###### H6
 
 > Quote with `inline code`, a [link](https://example.com), **bold text**, *italic text*,
-> ~~strikethrough~~, _underlined_, ***bold and italic***.
+> ~~strikethrough~~, ***bold and italic***.
 
 
 Some outside of quote with `inline code`, a [link](https://example.com), **bold text**, *italic
-text*, ~~strikethrough~~, _underlined_, ***bold and italic***.
+text*, ~~strikethrough~~, ***bold and italic***.
 
 ![some alt text](./some/path/to/image.png)
 
@@ -30,6 +30,7 @@ function Object:new(this, that)
   self._this.do(true)
   if this then
     -- comment
+    b = a + c
     print(type(string.gsub(that, "%b{} %d%s")) == nil and 1 or 1.12)
   end
 end
@@ -66,3 +67,4 @@ fn main() -> Result<()> {
 ```
 
 <!-- TODO: add more languages; leave comment to also support comments -->
+<!-- some link in the comments: https://github.com/nvim-treesitter -->
