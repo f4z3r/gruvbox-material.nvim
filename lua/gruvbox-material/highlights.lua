@@ -444,12 +444,12 @@ function highlights.treesitter()
     ["@variable.parameter.builtin"] = { link = "@variable.builtin" },
     ["@variable.member"] = { link = "@variable" },
 
-    ["@constant"] = { link = "Green" },
+    ["@constant"] = { link = "Aqua" },
     ["@constant.builtin"] = { link = "Yellow" },
     ["@constant.macro"] = { link = "Blue" },
 
-    ["@module"] = { link = "Fg" },
-    ["@module.builtin"] = { link = "Blue" },
+    ["@module"] = { link = "Blue" },
+    ["@module.builtin"] = { link = "@module" },
 
     ["@label"] = { link = "Orange" },
 
@@ -457,7 +457,7 @@ function highlights.treesitter()
     ["@string"] = { link = "Aqua" },
     ["@string.documentation"] = { link = "Comment" },
     ["@string.regexp"] = { link = "Green" },
-    ["@string.escape"] = { link = "Green" },
+    ["@string.escape"] = { link = "Yellow" },
     ["@string.special"] = { link = "@string" },
     ["@string.special.symbol"] = { link = "@string" },
     ["@string.special.url"] = { link = "Yellow" },
@@ -465,6 +465,7 @@ function highlights.treesitter()
 
     ["@character"] = { link = "Aqua" },
     ["@character.special"] = { link = "Aqua" },
+    ["@character.printf"] = { link = "Green" },
 
     ["@boolean"] = { link = "Boolean" },
     ["@number"] = { link = "Purple" },
@@ -513,7 +514,7 @@ function highlights.treesitter()
     -- punctuation
     ["@punctuation.delimiter"] = { link = "Fg" },
     ["@punctuation.bracket"] = { link = "Fg" },
-    ["@punctuation.special"] = { link = "Blue" },
+    ["@punctuation.special"] = { link = "Fg" },
 
     -- comments
     ["@comment"] = { link = "Comment" },

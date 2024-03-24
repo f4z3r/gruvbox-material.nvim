@@ -48,7 +48,6 @@ function Object:new(this, that)
     b = a + c
     print(type(string.gsub(that, "%b{} \n%d%s")) == nil and 1 or 1.12)
     string.format("%s=%d", this, that)
-
   end
 end
 ```
