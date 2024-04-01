@@ -3,6 +3,9 @@ local utils = {}
 function utils.highlight(group, color)
   local fg = color.fg or "NONE"
   local bg = color.bg or "NONE"
+  if vim.g.gruvbox_material_transparent_background == 1 then
+    bg = "NONE"
+  end
   local sp = color.sp and "guisp=" .. color.sp or ""
   local style = color.style or "NONE"
 
