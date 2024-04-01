@@ -73,7 +73,7 @@ function highlights.custom()
     syntax.VirtualTextHint = { link = "Hint" }
   end
 
-  if g.transparent_background == 1 or g.sign_column_background ~= "default" then
+  if g.gruvbox_material_transparent_background == 1 or g.gruvbox_material_sign_column_background ~= "default" then
     syntax.RedSign = { fg = colors.red }
     syntax.OrangeSign = { fg = colors.orange }
     syntax.YellowSign = { fg = colors.yellow }
