@@ -1,5 +1,11 @@
 # Changelog
 
+## Version `0.1.2` - 2024-04-01
+
+### Fixes
+
+- Fix support for `gruvbox_material_transparent_background`.
+
 ## Version `0.1.1` - 2024-03-24
 
 ### Fixes
