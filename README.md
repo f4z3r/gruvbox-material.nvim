@@ -53,6 +53,22 @@ Plug 'f4z3r/gruvbox-material.nvim'
 use 'f4z3r/gruvbox-material.nvim'
 ```
 
+[lazy](https://github.com/folke/lazy.nvim)
+
+
+```lua
+
+	{
+		'f4z3r/gruvbox-material.nvim',
+		name = 'gruvbox-material',
+		lazy = false,
+		priority = 1000,
+        config = function()
+        -- configs go here
+        end,
+    },
+```
+
 ## 🚀 Usage
 
 Load the colors scheme:
@@ -77,18 +93,23 @@ This is an example of the function with the default values.
 
 > ❗️ configuration needs to be set **BEFORE** loading the color scheme
 
-| Option                                 | Default | Description          |
-| -------------------------------------- | ------- | -------------------- |
-| gruvbox_material_enable_italic_comment | `1`     | Make comments italic |
+| Option                                  | Default | Description                 |
+| --------------------------------------- | ------- | --------------------------- |
+| gruvbox_material_enable_italic_comment  | `1`     | Make comments italic        |
+| gruvbox_material_transparent_background | `0`     | Make background transparent |
 
 Lua:
 
 ```lua
 vim.g.gruvbox_material_enable_italic_comment = 1
+vim.g.gruvbox_material_transparent_background = 0
+
 ```
 
 Vim script:
 
 ```vim
 let g:gruvbox_material_enable_italic_comment = 1
+let g:gruvbox_material_transparent_background = 0
+
 ```
