@@ -168,7 +168,7 @@ function highlights.highlight_groups()
     DiffDelete = { bg = colors.bg_diff_red }, -- Deleted line
     DiffText = { fg = colors.bg0, bg = colors.blue }, -- Changed text within a changed line
 
-    EndOfBuffer = { fg = colors.bg5, bg = colors.bg0 }, -- filler lines (~) after the last line in the buffer
+    EndOfBuffer = { fg = colors.bg5, bg = colors.bg0, transparent = true }, -- filler lines (~) after the last line in the buffer
 
     VertSplit = { fg = colors.bg5 }, -- the column separating verti-- cally split windows
 
@@ -197,8 +197,8 @@ function highlights.highlight_groups()
     PmenuSbar = { bg = colors.bg3 }, -- scrollbar
     PmenuThumb = { bg = colors.grey0 }, -- Thumb of the scrollbar
 
-    Normal = { fg = colors.fg0, bg = colors.bg0 }, -- normal text
-    NormalFloat = { fg = colors.fg1, bg = colors.bg3 },
+    Normal = { fg = colors.fg0, bg = colors.bg0, transparent = true }, -- normal text
+    NormalFloat = { fg = colors.fg1, bg = colors.bg3, transparent = true },
 
     Question = { fg = colors.yellow }, -- hit-enter prompt and yes/no questions
 
@@ -215,7 +215,7 @@ function highlights.highlight_groups()
     TabLineFill = { fg = colors.fg1, bg = colors.bg_statusline1 },
     TabLineSel = { fg = colors.bg0, bg = colors.grey2 },
 
-    Visual = { bg = colors.bg3 }, -- Visual mode selection
+    Visual = { bg = colors.bg3, force = true }, -- Visual mode selection
     VisualNOS = { link = "Visual" }, -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
     WildMenu = { link = "PmenuSel" }, --  current match in 'wildmenu' completion
 
