@@ -1,5 +1,11 @@
 # Changelog
 
+## Version `0.1.3` - 2024-04-07
+
+### Fixes
+
+- Fix `gruvbox_material_transparent_background` to only make base background transparent.
+
 ## Version `0.1.2` - 2024-04-01
 
 ### Fixes
