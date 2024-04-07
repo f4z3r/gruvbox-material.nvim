@@ -215,7 +215,7 @@ function highlights.highlight_groups()
     TabLineFill = { fg = colors.fg1, bg = colors.bg_statusline1 },
     TabLineSel = { fg = colors.bg0, bg = colors.grey2 },
 
-    Visual = { bg = colors.bg3, force = true }, -- Visual mode selection
+    Visual = { bg = colors.bg3 }, -- Visual mode selection
     VisualNOS = { link = "Visual" }, -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
     WildMenu = { link = "PmenuSel" }, --  current match in 'wildmenu' completion
 
