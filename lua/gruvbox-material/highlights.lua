@@ -31,7 +31,7 @@ function highlights.custom()
     Success = { link = "Green" },
     Hint = { link = "Green" },
 
-    ErrorFloat = { fg = colors.blue, bg = colors.bg3 },
+    ErrorFloat = { fg = colors.red, bg = colors.bg3 },
     WarningFloat = { fg = colors.yellow, bg = colors.bg3 },
     InfoFloat = { fg = colors.blue, bg = colors.bg3 },
     HintFloat = { fg = colors.green, bg = colors.bg3 },
