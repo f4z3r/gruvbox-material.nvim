@@ -17,6 +17,8 @@ supports both `dark` and `light` themes, based on configured background.
 
 ---
 
+**Table of Contents:**
+
 <!--toc:start-->
 - [Gruvbox Material Scheme](#gruvbox-material-scheme)
   - [Features](#features)
