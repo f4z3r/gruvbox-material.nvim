@@ -4,16 +4,30 @@
 > This is a continuation of the original work from WittyJudge:
 > https://github.com/WIttyJudge/gruvbox-material.nvim
 
-THIS IS IN DEVELOPEMENT FOR NOW
-
 A port of [gruvbox-material](https://github.com/sainnhe/gruvbox-material) colorscheme for Neovim
-written in Lua. Supports both `dark` and `light` themes, based on configured background.
+written in Lua. It does not aim to be 100% compatible with the mentioned repository, but rather
+focuses on keeping the existing scheme stable and to support popular plugins. This colorscheme 
+supports both `dark` and `light` themes, based on configured background.
 
-Gruvbox Material is a modified version of Gruvbox, the contrast is adjusted to be softer in order to
-protect developers' eyes. Colorscheme supports a lot of new features added to Neovim like built-in
-LSP and [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+**Dark theme:**
+![](./assets/dark.jpg)
 
-## ✨ Features
+**Light theme:**
+![](./assets/light.jpg)
+
+---
+
+<!--toc:start-->
+- [Gruvbox Material Scheme](#gruvbox-material-scheme)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Configuration](#configuration)
+<!--toc:end-->
+
+---
+
+## Features
 
 - Supported Plugins:
   - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -33,11 +47,10 @@ LSP and [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 
 Please feel free to open an issue if you want some features or other plugins to be included.
 
-## ⚡️ Requirements
+## Installation
 
-- Neovim >= 0.5.0
-
-## 📦 Installation
+> [!NOTE]
+> This plugin requires Neovim >= 0.5.0
 
 Install via your favourite package manager:
 
@@ -69,7 +82,7 @@ use 'f4z3r/gruvbox-material.nvim'
 },
 ```
 
-## 🚀 Usage
+## Usage
 
 Load the colors scheme:
 
@@ -87,11 +100,13 @@ Vim script:
 colorscheme gruvbox-material
 ```
 
-## ⚙️ Configuration
+## Configuration
+
+> [!IMPORTANT]
+> The configuration needs to be set **before** loading the color scheme. How the configuration is
+> set is likely to change in the future to support setting values via the `setup()` function.
 
 This is an example of the function with the default values.
-
-> ❗️ configuration needs to be set **BEFORE** loading the color scheme
 
 | Option                                  | Default | Description                 |
 | --------------------------------------- | ------- | --------------------------- |
@@ -103,7 +118,6 @@ Lua:
 ```lua
 vim.g.gruvbox_material_enable_italic_comment = 1
 vim.g.gruvbox_material_transparent_background = 0
-
 ```
 
 Vim script:
@@ -111,5 +125,4 @@ Vim script:
 ```vim
 let g:gruvbox_material_enable_italic_comment = 1
 let g:gruvbox_material_transparent_background = 0
-
 ```
