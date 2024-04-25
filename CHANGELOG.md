@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Fixes
+
+- Fix plugin load to allow using dynamic background settings to configure theme.
+
 ## Version `0.1.3` - 2024-04-07
 
 ### Fixes
