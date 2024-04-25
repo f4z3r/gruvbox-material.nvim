@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## Version `0.1.4` - 2024-04-25
 
 ### Fixes
 
