@@ -23,19 +23,12 @@ end
 local gruvbox = {}
 
 function gruvbox.setup(cfg)
-  --TODO: use the configuration to configure the lua plugin
-  if vim.g.loaded_gruvbox_material == 1 then
-    return
-  end
-  vim.g.loaded_gruvbox_material = 1
-
   set_default_global_options()
 
   vim.cmd("highlight clear")
   if vim.fn.exists("syntax_on") then
     vim.cmd("syntax reset")
   end
-  vim.o.background = "dark"
   vim.o.termguicolors = true
   vim.g.colors_name = "gruvbox-material"
 
