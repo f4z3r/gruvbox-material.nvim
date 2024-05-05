@@ -85,7 +85,7 @@ use 'f4z3r/gruvbox-material.nvim'
 
 ## Usage and Configuration
 
-Load the colors scheme:
+Load the color scheme and define the desired options:
 
 ```lua
 -- values shown are defaults and will be used if not provided
