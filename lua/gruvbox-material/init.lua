@@ -11,6 +11,7 @@ local DEFAULT_CONFIG = {
   },
   float = {
     force_background = false,
+    background_color = nil,
   }
 }
 

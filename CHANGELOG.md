@@ -5,6 +5,7 @@
 ### Added
 
 - Allow to force a background for floating windows even if the normal background is transparent.
+- Allow to explicitly set the background color of floating windows.
 
 ### Changed
 

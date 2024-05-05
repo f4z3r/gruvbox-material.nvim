@@ -40,6 +40,7 @@ highlighter.StandardHighligher = StandardHighlighter
 function highlighter.build(config)
   local hl = StandardHighlighter:new()
 
+  -- italics
   if not config.comments.italics and config.italics then
     local comments = utils.Set:new({ "Comment", "SpecialComment", "Todo" })
     hl:add_override(function(g, o)
@@ -57,14 +58,16 @@ function highlighter.build(config)
     end)
   end
 
+  -- background stuff
+  local float = utils.Set:new({
+    "NormalFloat",
+    "ErrorFloat",
+    "WarningFloat",
+    "InfoFloat",
+    "HintFloat",
+  })
+
   if config.background.transparent then
-    local float = utils.Set:new({
-      "NormalFloat",
-      "ErrorFloat",
-      "WarningFloat",
-      "InfoFloat",
-      "HintFloat",
-    })
     local background = utils.Set:new({
       "EndOfBuffer",
       "Normal",
@@ -82,6 +85,15 @@ function highlighter.build(config)
       end
       if background:contains(g) or float:contains(g) then
         o.bg = nil
+      end
+      return g, o
+    end)
+  end
+
+  if config.float.background_color then
+    hl:add_override(function(g, o)
+      if float:contains(g) then
+        o.bg = config.float.background_color
       end
       return g, o
     end)

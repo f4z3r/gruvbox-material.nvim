@@ -6,7 +6,7 @@
 
 A port of [gruvbox-material](https://github.com/sainnhe/gruvbox-material) colorscheme for Neovim
 written in Lua. It does not aim to be 100% compatible with the mentioned repository, but rather
-focuses on keeping the existing scheme stable and to support popular plugins. This colorscheme 
+focuses on keeping the existing scheme stable and to support popular plugins. This colorscheme
 supports both `dark` and `light` themes, based on configured background.
 
 **Dark theme:**
@@ -90,15 +90,17 @@ Load the colors scheme:
 ```lua
 -- values shown are defaults and will be used if not provided
 require('gruvbox-material').setup({
-  italics = true,   -- enable italics in general
+  italics = true,             -- enable italics in general
   comments = {
-    italics = true, -- enable italic comments
+    italics = true,           -- enable italic comments
   },
   background = {
-    transparent = false,  -- set the background to transparent
+    transparent = false,      -- set the background to transparent
   },
   float = {
     force_background = false, -- force background on floats even when background.transparent is set
+    background_color = nil,   -- set color for float backgrounds. If nil, uses the default color set
+                              -- by the colorscheme
   }
 })
 ```
