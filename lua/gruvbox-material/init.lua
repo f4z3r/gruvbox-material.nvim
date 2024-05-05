@@ -12,7 +12,7 @@ local DEFAULT_CONFIG = {
   float = {
     force_background = false,
     background_color = nil,
-  }
+  },
 }
 
 ---Apply defaults to base
@@ -112,4 +112,5 @@ function gruvbox.setup(config)
     highlighter:highlight(group, options)
   end
 end
+
 return gruvbox
