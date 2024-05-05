@@ -58,10 +58,16 @@ function highlighter.build(config)
   end
 
   if config.background.transparent then
+    local float = utils.Set:new({
+      "NormalFloat",
+      "ErrorFloat",
+      "WarningFloat",
+      "InfoFloat",
+      "HintFloat",
+    })
     local background = utils.Set:new({
       "EndOfBuffer",
       "Normal",
-      "NormalFloat",
       "RedSign",
       "OrangeSign",
       "YellowSign",
@@ -71,7 +77,10 @@ function highlighter.build(config)
       "PurpleSign",
     })
     hl:add_override(function(g, o)
-      if background:contains(g) then
+      if config.float.force_background and float:contains(g) then
+        return g, o
+      end
+      if background:contains(g) or float:contains(g) then
         o.bg = nil
       end
       return g, o

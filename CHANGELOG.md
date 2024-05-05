@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Allow to force a background for floating windows even if the normal background is transparent.
+
 ### Changed
 
 - Full refactor of the code to simplify future changes.

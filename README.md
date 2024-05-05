@@ -97,5 +97,8 @@ require('gruvbox-material').setup({
   background = {
     transparent = false,  -- set the background to transparent
   },
+  float = {
+    force_background = false, -- force background on floats even when background.transparent is set
+  }
 })
 ```
