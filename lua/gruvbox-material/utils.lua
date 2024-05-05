@@ -1,24 +1,50 @@
 local utils = {}
 
-function utils.highlight(group, color)
-  local fg = color.fg or "NONE"
-  local bg = color.bg or "NONE"
-  if vim.g.gruvbox_material_transparent_background == 1 then
-    bg = "NONE"
+---@class Set
+local Set = {}
+
+---create a new Set
+---@param vals any[]
+---@return Set
+function Set:new(vals)
+  local o = {}
+  setmetatable(o, self)
+  self.__index = self
+  for _, val in ipairs(vals) do
+    o[val] = true
   end
-  local sp = color.sp and "guisp=" .. color.sp or ""
-  local style = color.style or "NONE"
+  return o
+end
 
-  -- TODO: move this to nvim API
-  -- local hl = "highlight " .. group .. " " .. style .. " " .. fg .. " " .. bg .. " " .. sp
-  local hl = string.format("highlight %s gui=%s guifg=%s guibg=%s %s", group, style, fg, bg, sp)
+---check if a value is contained in the set
+---@param val any
+---@return boolean
+function Set:contains(val)
+  return self[val] or false
+end
 
-  vim.cmd(hl)
+utils.Set = Set
 
-  -- Inherit colors from another group
-  if color.link then
-    return vim.cmd("highlight! link " .. group .. " " .. color.link)
+---deep copy a table
+---@param tbl table
+---@return table
+function utils.table_copy(tbl)
+  local res = {}
+  for k, v in pairs(tbl) do
+    if type(v) == "table" then
+      res[k] = utils.table_copy(v)
+    else
+      res[k] = v
+    end
   end
+  return res
+end
+
+---convert number to boolean
+---@param num number
+---@return boolean
+function utils.num_to_bool(num)
+  return num ~= 0
 end
 
 return utils
