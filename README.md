@@ -23,8 +23,7 @@ supports both `dark` and `light` themes, based on configured background.
 - [Gruvbox Material Scheme](#gruvbox-material-scheme)
   - [Features](#features)
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [Configuration](#configuration)
+  - [Usage and Configuration](#usage-and-configuration)
 <!--toc:end-->
 
 ---
@@ -74,37 +73,22 @@ use 'f4z3r/gruvbox-material.nvim'
 ```lua
 
 {
-	'f4z3r/gruvbox-material.nvim',
-	name = 'gruvbox-material',
-	lazy = false,
-	priority = 1000,
-        config = function()
-        -- configs go here
-        end,
+  'f4z3r/gruvbox-material.nvim',
+  name = 'gruvbox-material',
+  lazy = false,
+  priority = 1000,
+  config = function()
+    -- configs go here
+  end,
 },
 ```
 
-## Usage
+## Usage and Configuration
 
 Load the colors scheme:
 
-Lua:
-
 ```lua
-require('gruvbox-material').setup()
--- or
-vim.cmd('colorscheme gruvbox-material')
-```
-
-Vim script:
-
-```vim
-colorscheme gruvbox-material
-```
-
-## Configuration
-
-```lua
+-- values shown are defaults and will be used if not provided
 require('gruvbox-material').setup({
   italics = true,   -- enable italics in general
   comments = {
@@ -114,29 +98,4 @@ require('gruvbox-material').setup({
     transparent = false,  -- set the background to transparent
   },
 })
-```
-
-> [!IMPORTANT]
-> The configuration needs to be set **before** loading the color scheme. How the configuration is
-> set is likely to change in the future to support setting values via the `setup()` function.
-
-This is an example of the function with the default values.
-
-| Option                                  | Default | Description                 |
-| --------------------------------------- | ------- | --------------------------- |
-| gruvbox_material_enable_italic_comment  | `1`     | Make comments italic        |
-| gruvbox_material_transparent_background | `0`     | Make background transparent |
-
-Lua:
-
-```lua
-vim.g.gruvbox_material_enable_italic_comment = 1
-vim.g.gruvbox_material_transparent_background = 0
-```
-
-Vim script:
-
-```vim
-let g:gruvbox_material_enable_italic_comment = 1
-let g:gruvbox_material_transparent_background = 0
 ```
