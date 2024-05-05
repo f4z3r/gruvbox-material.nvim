@@ -104,6 +104,18 @@ colorscheme gruvbox-material
 
 ## Configuration
 
+```lua
+require('gruvbox-material').setup({
+  italics = true,   -- enable italics in general
+  comments = {
+    italics = true, -- enable italic comments
+  },
+  background = {
+    transparent = false,  -- set the background to transparent
+  },
+})
+```
+
 > [!IMPORTANT]
 > The configuration needs to be set **before** loading the color scheme. How the configuration is
 > set is likely to change in the future to support setting values via the `setup()` function.
