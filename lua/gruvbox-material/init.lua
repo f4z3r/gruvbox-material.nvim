@@ -9,6 +9,9 @@ local DEFAULT_CONFIG = {
   background = {
     transparent = false,
   },
+  float = {
+    force_background = false,
+  }
 }
 
 ---Apply defaults to base
