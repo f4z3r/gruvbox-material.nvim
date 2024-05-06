@@ -5,6 +5,7 @@
 ### Added
 
 - Support for [nvim-notify](https://github.com/rcarriga/nvim-notify)
+- Support for Neovim's Diagnostic highlights.
 
 ## [1.0.0] - 2024-05-05
 
