@@ -678,4 +678,22 @@ return {
   plugDeleted = { link = "Grey" },
   plugEdge = { link = "Yellow" },
   plugSha = { link = "Green" },
+
+  -- rcarriga/nvim-notify
+  NotifyBackground = { bg = "#000000" },
+  NotifyERRORBorder = { link = "Error" },
+  NotifyERRORIcon = { link = "Error" },
+  NotifyERRORTitle = { link = "Error" },
+  NotifyWARNBorder = { link = "Warning" },
+  NotifyWARNIcon = { link = "Warning" },
+  NotifyWARNTitle = { link = "Warning" },
+  NotifyINFOBorder = { link = "Info" },
+  NotifyINFOIcon = { link = "Info" },
+  NotifyINFOTitle = { link = "Info" },
+  NotifyDEBUGBorder = { link = "Hint" },
+  NotifyDEBUGIcon = { link = "Hint" },
+  NotifyDEBUGTitle = { link = "Hint" },
+  NotifyTRACEBorder = { link = "Success" },
+  NotifyTRACEIcon = { link = "Success" },
+  NotifyTRACETitle = { link = "Success" },
 }
