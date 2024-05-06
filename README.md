@@ -72,15 +72,12 @@ use 'f4z3r/gruvbox-material.nvim'
 
 
 ```lua
-
 {
   'f4z3r/gruvbox-material.nvim',
   name = 'gruvbox-material',
   lazy = false,
   priority = 1000,
-  config = function()
-    -- configs go here
-  end,
+  opts = {},
 },
 ```
 
@@ -101,7 +98,7 @@ require('gruvbox-material').setup({
   float = {
     force_background = false, -- force background on floats even when background.transparent is set
     background_color = nil,   -- set color for float backgrounds. If nil, uses the default color set
-                              -- by the colorscheme
+                              -- by the color scheme
   }
 })
 ```
