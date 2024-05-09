@@ -7,6 +7,10 @@
 - Support for [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - Support for Neovim's Diagnostic highlights.
 
+### Fixed
+
+- Change foreground color for non-current statusline highlight group.
+
 ## [1.0.0] - 2024-05-05
 
 ### Added

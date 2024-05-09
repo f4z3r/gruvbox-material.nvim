@@ -158,7 +158,7 @@ return {
 
   StatusLine = { fg = colors.fg1, bg = colors.bg_statusline1 }, -- status line of current window
   StatusLineTerm = { link = "StatusLine" }, -- status line of current :terminal window
-  StatusLineNC = { fg = colors.fg1, bg = colors.bg_statusline1 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+  StatusLineNC = { fg = colors.grey1, bg = colors.bg_statusline1 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   StatusLineTermNC = { link = "StatusLineNC" }, -- status line of non-current :terminal window
   TabLine = { fg = colors.fg1, bg = colors.bg_statusline3 },
   TabLineFill = { fg = colors.fg1, bg = colors.bg_statusline1 },
