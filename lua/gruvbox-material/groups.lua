@@ -151,10 +151,10 @@ return {
 
   Question = { fg = colors.yellow }, -- hit-enter prompt and yes/no questions
 
-  SpellBad = { undercurl = true }, -- Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
-  SpellCap = { undercurl = true }, -- Word that should start with a capital. This will be combined with the highlighting used otherwise.
-  SpellLocal = { undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
-  SpellRare = { undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
+  SpellBad = { undercurl = true, sp = colors.red }, -- Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
+  SpellCap = { undercurl = true, sp = colors.green }, -- Word that should start with a capital. This will be combined with the highlighting used otherwise.
+  SpellLocal = { undercurl = true, sp = colors.red }, -- Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
+  SpellRare = { undercurl = true, sp = colors.orange }, -- Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
 
   StatusLine = { fg = colors.fg1, bg = colors.bg_statusline1 }, -- status line of current window
   StatusLineTerm = { link = "StatusLine" }, -- status line of current :terminal window
