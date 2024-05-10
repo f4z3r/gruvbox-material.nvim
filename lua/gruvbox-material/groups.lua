@@ -158,7 +158,7 @@ return {
 
   StatusLine = { fg = colors.fg1, bg = colors.bg_statusline1 }, -- status line of current window
   StatusLineTerm = { link = "StatusLine" }, -- status line of current :terminal window
-  StatusLineNC = { fg = colors.fg1, bg = colors.bg_statusline1 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+  StatusLineNC = { fg = colors.grey1, bg = colors.bg_statusline1 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   StatusLineTermNC = { link = "StatusLineNC" }, -- status line of non-current :terminal window
   TabLine = { fg = colors.fg1, bg = colors.bg_statusline3 },
   TabLineFill = { fg = colors.fg1, bg = colors.bg_statusline1 },
@@ -206,6 +206,34 @@ return {
   healthError = { link = "Error" },
   healthSuccess = { link = "Success" },
   healthWarning = { link = "Warning" },
+
+  DiagnosticError = { link = "Error" },
+  DiagnosticWarn = { link = "Warning" },
+  DiagnosticInfo = { link = "Info" },
+  DiagnosticHint = { link = "Hint" },
+  DiagnosticOk = { link = "Success" },
+  DiagnosticVirtualTextError = { link = "VirtualTextError" },
+  DiagnosticVirtualTextWarn = { link = "VirtualTextWarning" },
+  DiagnosticVirtualTextInfo = { link = "VirtualTextInfo" },
+  DiagnosticVirtualTextHint = { link = "VirtualTextHint" },
+  DiagnosticVirtualTextOk = { link = "Success" },
+  DiagnosticUnderlineError = { undercurl = true, sp = colors.red },
+  DiagnosticUnderlineWarn = { undercurl = true, sp = colors.yellow },
+  DiagnosticUnderlineInfo = { undercurl = true, sp = colors.blue },
+  DiagnosticUnderlineHint = { undercurl = true, sp = colors.green },
+  DiagnosticUnderlineOk = { undercurl = true, sp = colors.green },
+  DiagnosticFloatingError = { link = "ErrorFloat" },
+  DiagnosticFloatingWarn = { link = "WarningFloat" },
+  DiagnosticFloatingInfo = { link = "InfoFloat" },
+  DiagnosticFloatingHint = { link = "HintFloat" },
+  DiagnosticFloatingOk = { link = "HintFloat" },
+  DiagnosticSignError = { link = "RedSign" },
+  DiagnosticSignWarn = { link = "YellowSign" },
+  DiagnosticSignInfo = { link = "BlueSign" },
+  DiagnosticSignHint = { link = "GreenSign" },
+  DiagnosticSignOk = { link = "GreenSign" },
+  DiagnosticDeprecated = { link = "Grey" },
+  DiagnosticUnnecessary = { link = "Yellow" },
 
   -----------------------
   -- Filetype specific --
@@ -650,4 +678,22 @@ return {
   plugDeleted = { link = "Grey" },
   plugEdge = { link = "Yellow" },
   plugSha = { link = "Green" },
+
+  -- rcarriga/nvim-notify
+  NotifyBackground = { bg = "#000000" },
+  NotifyERRORBorder = { link = "Error" },
+  NotifyERRORIcon = { link = "Error" },
+  NotifyERRORTitle = { link = "Error" },
+  NotifyWARNBorder = { link = "Warning" },
+  NotifyWARNIcon = { link = "Warning" },
+  NotifyWARNTitle = { link = "Warning" },
+  NotifyINFOBorder = { link = "Info" },
+  NotifyINFOIcon = { link = "Info" },
+  NotifyINFOTitle = { link = "Info" },
+  NotifyDEBUGBorder = { link = "Hint" },
+  NotifyDEBUGIcon = { link = "Hint" },
+  NotifyDEBUGTitle = { link = "Hint" },
+  NotifyTRACEBorder = { link = "Success" },
+  NotifyTRACEIcon = { link = "Success" },
+  NotifyTRACETitle = { link = "Success" },
 }
