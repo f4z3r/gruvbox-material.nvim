@@ -7,7 +7,8 @@
 A port of [gruvbox-material](https://github.com/sainnhe/gruvbox-material) colorscheme for Neovim
 written in Lua. It does not aim to be 100% compatible with the mentioned repository, but rather
 focuses on keeping the existing scheme stable and to support popular plugins. This colorscheme
-supports both `dark` and `light` themes, based on configured background.
+supports both `dark` and `light` themes, based on configured background, and harder or softer
+contrasts.
 
 **Dark theme:**
 ![](./assets/dark.jpg)
