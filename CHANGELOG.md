@@ -5,6 +5,8 @@
 ### Added
 
 - Support for hard and soft contrast.
+- Support for [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- Support for [vim-illuminate](https://github.com/RRethy/vim-illuminate)
 
 ## [1.1.0] - 2024-05-10
 
