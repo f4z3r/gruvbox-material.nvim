@@ -45,6 +45,7 @@ supports both `dark` and `light` themes, based on configured background.
   - [indentLine](https://github.com/Yggdroot/indentLine)
   - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
   - [nvim-notify](https://github.com/rcarriga/nvim-notify)
+  - [vim-illuminate](https://github.com/RRethy/vim-illuminate)
   - And many other plugins you can find [here](./lua/gruvbox-material/highlights.lua#L384)
 
 Please feel free to open an issue if you want some features or other plugins to be included.
