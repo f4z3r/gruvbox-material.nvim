@@ -699,6 +699,11 @@ function groups.get(contrast)
     NotifyTRACEBorder = { link = "Success" },
     NotifyTRACEIcon = { link = "Success" },
     NotifyTRACETitle = { link = "Success" },
+
+    -- RRethy/vim-illuminate
+    IlluminatedWordText = { link = "DiffChange" },
+    IlluminatedWordRead = { link = "DiffAdd" },
+    IlluminatedWordWrite = { link = "DiffDelete" },
   }
 end
 
