@@ -3,6 +3,7 @@ local utils = require("gruvbox-material.utils")
 
 local DEFAULT_CONFIG = {
   italics = true,
+  contrast = "medium",
   comments = {
     italics = true,
   },
@@ -107,7 +108,7 @@ function gruvbox.setup(config)
   vim.g.colors_name = "gruvbox-material"
 
   local highlighter = hl.build(cfg)
-  local groups = require("gruvbox-material.groups")
+  local groups = require("gruvbox-material.groups").get(cfg.contrast)
   for group, options in pairs(groups) do
     highlighter:highlight(group, options)
   end
