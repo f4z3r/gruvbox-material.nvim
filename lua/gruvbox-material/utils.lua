@@ -47,4 +47,16 @@ function utils.num_to_bool(num)
   return num ~= 0
 end
 
+---merge two tables
+---@param tbl1 table
+---@param tbl2 table
+---@return table
+function utils.merge_tables(tbl1, tbl2)
+  local res = utils.table_copy(tbl1)
+  for k, v in pairs(tbl2) do
+    res[k] = v
+  end
+  return res
+end
+
 return utils

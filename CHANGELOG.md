@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## [unreleased] -->
+## [unreleased]
+
+### Added
+
+- Support for hard and soft contrast.
 
 ## [1.1.0] - 2024-05-10
 
