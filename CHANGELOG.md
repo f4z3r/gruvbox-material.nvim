@@ -1,6 +1,10 @@
 # Changelog
 
-## [unreleased]
+## [Unreleased]
+
+### Added
+
+- Support for customizing the theme via a simple callback.
 
 ### Changed
 
