@@ -25,6 +25,7 @@ contrasts.
   - [Features](#features)
   - [Installation](#installation)
   - [Usage and Configuration](#usage-and-configuration)
+    - [Customization](#customization)
 <!--toc:end-->
 
 ---
@@ -103,6 +104,54 @@ require('gruvbox-material').setup({
     force_background = false, -- force background on floats even when background.transparent is set
     background_color = nil,   -- set color for float backgrounds. If nil, uses the default color set
                               -- by the color scheme
-  }
+  },
+  customize = nil,            -- customize the theme in any way you desire, see below what this
+                              -- configuration accepts
+})
+```
+
+### Customization
+
+In the configuration, you can set `customize` to a function to modify the theme on the fly. This
+value accepts a function that takes a highlight group name and some options, and returns some
+options.
+
+The function signature is:
+
+```lua
+fun(group: string, options: table): table
+```
+
+Where both the options table and the return table are options as described in the
+[`nvim_set_hl`](https://neovim.io/doc/user/api.html#nvim_set_hl()) `val` parameter.
+
+For instance, in order to disable bold usage on the entire color scheme, you can use
+
+```lua
+require('gruvbox-material').setup({
+  customize = function(_, o)
+    o.bold = false
+    return o
+  end,
+})
+```
+
+Or if you want to change the coloring from a specific highlight group, in this case set the current
+line number to a bold orange instead of the default grey:
+
+```lua
+-- get colors from the colorscheme for current background and "medium" contrast
+local colors = require("gruvbox-material.colors").get(vim.o.background, "medium")
+
+require('gruvbox-material').setup({
+  customize = function(g, o)
+    if g == "CursorLineNr" then
+      o.link = nil            -- wipe a potential link, which would take precedence over other
+                              -- attributes
+      o.fg = colors.orange    -- or use any color in "#rrggbb" hex format
+      o.bold = true
+    end
+    return o
+  end,
 })
 ```

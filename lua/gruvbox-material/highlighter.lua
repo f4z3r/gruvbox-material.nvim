@@ -3,7 +3,7 @@ local utils = require("gruvbox-material.utils")
 local highlighter = {}
 
 ---@class StandardHighlighter
----@field private overrides (fun(group: string, options: table): string, table)[]
+---@field private overrides (fun(group: string, options: table): table)[]
 local StandardHighlighter = {}
 
 ---create a new highlighter
@@ -17,7 +17,7 @@ function StandardHighlighter:new()
 end
 
 ---add an override
----@param override fun(group: string, options: table): string, table
+---@param override fun(group: string, options: table): table
 function StandardHighlighter:add_override(override)
   self.overrides[#self.overrides + 1] = override
 end
@@ -27,7 +27,7 @@ end
 ---@param options table
 function StandardHighlighter:highlight(group, options)
   for _, override in ipairs(self.overrides) do
-    group, options = override(group, options)
+    options = override(group, options)
   end
   vim.api.nvim_set_hl(0, group, options)
 end
@@ -47,14 +47,14 @@ function highlighter.build(config)
       if comments:contains(g) then
         o.italic = false
       end
-      return g, o
+      return o
     end)
   end
 
   if not config.italics then
-    hl:add_override(function(g, o)
+    hl:add_override(function(_, o)
       o.italic = false
-      return g, o
+      return o
     end)
   end
 
@@ -81,12 +81,12 @@ function highlighter.build(config)
     })
     hl:add_override(function(g, o)
       if config.float.force_background and float:contains(g) then
-        return g, o
+        return o
       end
       if background:contains(g) or float:contains(g) then
         o.bg = nil
       end
-      return g, o
+      return o
     end)
   end
 
@@ -95,8 +95,12 @@ function highlighter.build(config)
       if float:contains(g) then
         o.bg = config.float.background_color
       end
-      return g, o
+      return o
     end)
+  end
+
+  if config.customize then
+    hl:add_override(config.customize)
   end
 
   return hl

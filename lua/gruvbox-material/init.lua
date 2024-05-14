@@ -14,6 +14,7 @@ local DEFAULT_CONFIG = {
     force_background = false,
     background_color = nil,
   },
+  customize = nil,
 }
 
 ---Apply defaults to base
