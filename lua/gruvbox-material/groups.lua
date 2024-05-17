@@ -236,7 +236,7 @@ function groups.get(contrast)
     DiagnosticSignHint = { link = "GreenSign" },
     DiagnosticSignOk = { link = "GreenSign" },
     DiagnosticDeprecated = { link = "Grey" },
-    DiagnosticUnnecessary = { link = "Yellow" },
+    DiagnosticUnnecessary = { link = "Grey" },
 
     -----------------------
     -- Filetype specific --
