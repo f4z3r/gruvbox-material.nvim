@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## [unreleased] -->
+## [unreleased]
+
+### Changed
+
+- Change `DiagnosticUnnecessary` color from yellow to gray.
 
 ## [1.2.0] - 2024-05-11
 
