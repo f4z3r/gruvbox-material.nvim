@@ -92,7 +92,7 @@ Load the color scheme and define the desired options:
 -- values shown are defaults and will be used if not provided
 require('gruvbox-material').setup({
   italics = true,             -- enable italics in general
-  contrast = "medium"         -- set contrast, can be any of "hard", "medium", "soft"
+  contrast = "medium",        -- set contrast, can be any of "hard", "medium", "soft"
   comments = {
     italics = true,           -- enable italic comments
   },
