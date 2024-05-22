@@ -11,10 +11,21 @@ supports both `dark` and `light` themes, based on configured background, and har
 contrasts.
 
 **Dark theme:**
-![](./assets/dark.jpg)
+![](./assets/dark-medium.png)
 
 **Light theme:**
-![](./assets/light.jpg)
+![](./assets/light-medium.png)
+
+<details>
+    <summary>Different contrasts</summary>
+
+| Contrast |             Dark              |             Light              |
+|  :---:   |            :----:             |             :----:             |
+|   Hard   |  ![](./assets/dark-hard.png)  |  ![](./assets/light-hard.png)  |
+|  Medium  | ![](./assets/dark-medium.png) | ![](./assets/light-medium.png) |
+|   Soft   |  ![](./assets/dark-soft.png)  |  ![](./assets/light-soft.png)  |
+
+</details>
 
 ---
 
