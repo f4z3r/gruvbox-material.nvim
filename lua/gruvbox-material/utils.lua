@@ -40,13 +40,6 @@ function utils.table_copy(tbl)
   return res
 end
 
----convert number to boolean
----@param num number
----@return boolean
-function utils.num_to_bool(num)
-  return num ~= 0
-end
-
 ---merge two tables
 ---@param tbl1 table
 ---@param tbl2 table
