@@ -14,6 +14,9 @@ local DEFAULT_CONFIG = {
     force_background = false,
     background_color = nil,
   },
+  signs = {
+    highlight = true,
+  },
   customize = nil,
 }
 

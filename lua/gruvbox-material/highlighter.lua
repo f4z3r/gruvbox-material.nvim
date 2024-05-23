@@ -58,6 +58,25 @@ function highlighter.build(config)
     end)
   end
 
+  -- signs highlighting
+  if not config.signs.highlight then
+    local signs = utils.Set:new({
+      "RedSign",
+      "OrangeSign",
+      "YellowSign",
+      "GreenSign",
+      "AquaSign",
+      "BlueSign",
+      "PurpleSign",
+    })
+    hl:add_override(function(g, o)
+      if signs:contains(g) then
+        o.bg = nil
+      end
+      return o
+    end)
+  end
+
   -- background stuff
   local float = utils.Set:new({
     "NormalFloat",
@@ -71,13 +90,6 @@ function highlighter.build(config)
     local background = utils.Set:new({
       "EndOfBuffer",
       "Normal",
-      "RedSign",
-      "OrangeSign",
-      "YellowSign",
-      "GreenSign",
-      "AquaSign",
-      "BlueSign",
-      "PurpleSign",
     })
     hl:add_override(function(g, o)
       if config.float.force_background and float:contains(g) then
