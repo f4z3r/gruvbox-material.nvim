@@ -1,0 +1,24 @@
+name: Feature Request
+description: Choose this template if you want to request a feature or support for another plugin.
+title: "[FEATURE] <title>"
+labels:
+- kind/feature
+body:
+- type: dropdown
+  id: kind
+  attributes:
+    label: What kind of feature is this about?
+    multiple: true
+    options:
+    - Additional plugin support
+    - Changes to default colors
+    - Support for additional configuration
+    - Other
+- type: textarea
+  attributes:
+    label: "Description"
+    description: |
+      Explain what it is you desire. Go into details about what you have considered and what
+      you expect the outcome of the feature to be.
+  validations:
+    required: true

@@ -8,7 +8,19 @@ body:
   attributes:
     label: "Description"
     description: |
-      Explain the bug/issue you are facing.
+      Explain the bug/issue you are facing, and add a screenshot of any visual artefacts.
+  validations:
+    required: true
+- type: checkboxes
+  attributes:
+    label: Screenshot
+    description: Please make sure you have a screenshot in the description of the issue above.
+    options:
+    - label: I have added a screenshot in the description.
+      required: true
+- type: textarea
+  attributes:
+    label: "Expected behavior"
   validations:
     required: true
 - type: textarea
@@ -24,15 +36,3 @@ body:
       ```
   validations:
     required: true
-- type: textarea
-  attributes:
-    label: "Expected behavior"
-  validations:
-    required: true
-- type: checkboxes
-  attributes:
-    label: Screenshot
-    description: Please comment a screenshot of the visual artefacts on the issue.
-    options:
-    - label: I have added a screenshot as a comment.
-      # required: true
