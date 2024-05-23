@@ -1,0 +1,38 @@
+name: Bug Report
+description: Choose this template if you want to report a bug.
+title: "[BUG] <title>"
+labels:
+- kind/bug
+body:
+- type: textarea
+  attributes:
+    label: "Description"
+    description: |
+      Explain the bug/issue you are facing.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: "Configuration"
+    description: |
+      Paste the configuration you are using.
+    placeholder: |
+      ```lua
+      require('gruvbox-material').setup({
+        -- your options
+      })
+      ```
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: "Expected behavior"
+  validations:
+    required: true
+- type: checkboxes
+  attributes:
+    label: Screenshot
+    description: Please comment a screenshot of the visual artefacts on the issue.
+    options:
+    - label: I have added a screenshot as a comment.
+      # required: true
