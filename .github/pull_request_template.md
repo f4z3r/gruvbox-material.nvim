@@ -20,8 +20,8 @@ something broke.
 
 ### Test Matrix
 
-| Contrast | Dark | Light |
-|   :-:    | :-:  |  :-:  |
-|   Soft   | [ ]  |  [ ]  |
-|  Medium  | [ ]  |  [ ]  |
-|   Hard   | [ ]  |  [ ]  |
+| Contrast |          Dark           |          Light          |
+|   :-:    |           :-:           |           :-:           |
+|   Soft   | <ul><li> [ ] </li></ul> | <ul><li> [ ] </li></ul> |
+|  Medium  | <ul><li> [ ] </li></ul> | <ul><li> [ ] </li></ul> |
+|   Hard   | <ul><li> [ ] </li></ul> | <ul><li> [ ] </li></ul> |
