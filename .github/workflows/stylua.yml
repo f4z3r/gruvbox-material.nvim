@@ -1,0 +1,16 @@
+name: Stylua
+on:
+- push
+- pull_request
+jobs:
+  stylua:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: StyLua
+      uses: JohnnyMorganz/stylua-action@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        version: 0.20.0
+        args: --check .
