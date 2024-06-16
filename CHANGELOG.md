@@ -6,6 +6,10 @@
 
 - Allow signs background configuration independently of regular background.
 
+### Added
+
+- Added `CurSearch` and `NormalNC` highlight groups.
+
 ## [1.3.0] - 2024-05-22
 
 ### Added

@@ -131,6 +131,7 @@ function groups.get(contrast)
 
     IncSearch = { fg = colors.bg0, bg = colors.bg_red }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     Search = { fg = colors.bg0, bg = colors.bg_green }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
+    CurSearch = { link = "Search" }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
     LineNr = { fg = colors.bg5 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 
     ErrorMsg = { link = "Error" }, -- error messages on the command line
@@ -150,6 +151,7 @@ function groups.get(contrast)
     PmenuThumb = { bg = colors.grey0 }, -- Thumb of the scrollbar
 
     Normal = { fg = colors.fg0, bg = colors.bg0 }, -- normal text
+    NormalNC = { link = "Normal" },
     NormalFloat = { fg = colors.fg1, bg = colors.bg3 },
 
     Question = { fg = colors.yellow }, -- hit-enter prompt and yes/no questions
