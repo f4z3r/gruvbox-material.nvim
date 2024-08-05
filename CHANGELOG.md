@@ -1,6 +1,7 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+## [1.3.1] - 2024-08-05
 
 ### Changed
 
@@ -94,7 +95,8 @@
 
 Initial version from [WittyJudge](https://github.com/WIttyJudge).
 
-[unreleased]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.3.0...HEAD
+<!-- [unreleased]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.3.1...HEAD -->
+[1.3.1]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.0.0...v1.1.0
