@@ -52,4 +52,42 @@ function utils.merge_tables(tbl1, tbl2)
   return res
 end
 
+---convert a color from RGB to Hex format
+---@param r number red value
+---@param g number green value
+---@param b number blue value
+---@return string
+function utils.rgb_to_hex(r, g, b)
+  return "#" .. string.format("%02X%02X%02X", r, g, b)
+end
+
+---convert a color from hex to RGB format
+---@param color string
+---@return number[]
+function utils.hex_to_rgb(color)
+  color = color:gsub("#", "")
+  return {
+    tonumber("0x" .. string.sub(color, 1, 2)),
+    tonumber("0x" .. string.sub(color, 3, 4)),
+    tonumber("0x" .. string.sub(color, 5, 6)),
+  }
+end
+
+---blend colors together
+---@param top string first hex color
+---@param bottom string second hex color
+---@param alpha number
+---@return string the resulting hex color
+function utils.blend(top, bottom, alpha)
+  local top_rgb = utils.hex_to_rgb(top)
+  local bottom_rgb = utils.hex_to_rgb(bottom)
+
+  local function blend(c)
+    c = ((alpha * top_rgb[c]) + ((1 - alpha) * bottom_rgb[c]))
+    return math.floor((math.min(math.max(0, c), 255) + 0.5))
+  end
+
+  return utils.rgb_to_hex(blend(1), blend(2), blend(3))
+end
+
 return utils

@@ -1,3 +1,5 @@
+local utils = require("gruvbox-material.utils")
+
 local groups = {}
 
 ---get highlight groups
@@ -535,6 +537,13 @@ function groups.get(contrast)
     ["@tag.attribute"] = { link = "@tag" },
     ["@tag.delimiter"] = { link = "Green" },
 
+    ["@text.title.1.marker.markdown"] = { link = "@markup.heading.1" },
+    ["@text.title.2.marker.markdown"] = { link = "@markup.heading.2" },
+    ["@text.title.3.marker.markdown"] = { link = "@markup.heading.3" },
+    ["@text.title.4.marker.markdown"] = { link = "@markup.heading.4" },
+    ["@text.title.5.marker.markdown"] = { link = "@markup.heading.5" },
+    ["@text.title.6.marker.markdown"] = { link = "@markup.heading.6" },
+
     ---------------------
     -- Plugin specific --
     ---------------------
@@ -737,6 +746,28 @@ function groups.get(contrast)
     CmpItemKindInterface = { fg = colors.orange },
     CmpItemKindColor = { link = "CmpItemKindInterface" },
     CmpItemKindTypeParameter = { link = "CmpItemKindInterface" },
+
+    -- neorg
+    NeorgHeading1Title = { link = "Red" },
+    NeorgHeading2Title = { link = "Orange" },
+    NeorgHeading3Title = { link = "Yellow" },
+    NeorgHeading4Title = { link = "Green" },
+    NeorgHeading5Title = { link = "Blue" },
+    NeorgHeading6Title = { link = "Purple" },
+    NeorgHeading1Prefix = { link = "Red" },
+    NeorgHeading2Prefix = { link = "Orange" },
+    NeorgHeading3Prefix = { link = "Yellow" },
+    NeorgHeading4Prefix = { link = "Green" },
+    NeorgHeading5Prefix = { link = "Blue" },
+    NeorgHeading6Prefix = { link = "Purple" },
+
+    -- Headlines
+    Headline1 = { bg = utils.blend(colors.red, colors.bg0, 0.18) },
+    Headline2 = { bg = utils.blend(colors.orange, colors.bg0, 0.18) },
+    Headline3 = { bg = utils.blend(colors.yellow, colors.bg0, 0.18) },
+    Headline4 = { bg = utils.blend(colors.green, colors.bg0, 0.18) },
+    Headline5 = { bg = utils.blend(colors.blue, colors.bg0, 0.18) },
+    Headline6 = { bg = utils.blend(colors.purple, colors.bg0, 0.18) },
   }
 end
 

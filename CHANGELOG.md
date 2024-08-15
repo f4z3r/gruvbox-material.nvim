@@ -1,6 +1,11 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Changed
+
+- Add better support for [neorg](https://github.com/nvim-neorg/neorg)
+- Add better support for [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim/)
 ## [1.3.1] - 2024-08-05
 
 ### Changed
