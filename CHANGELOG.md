@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Subsequent calls to `setup` take a cached configuration and require explicit override to unset.
+
 ### Fixed
 
 - Update light bg4 and statusline bg3 colour on hard contrast to have the correct value.
@@ -12,6 +16,7 @@
 
 - Add better support for [neorg](https://github.com/nvim-neorg/neorg)
 - Add better support for [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim/)
+
 ## [1.3.1] - 2024-08-05
 
 ### Changed

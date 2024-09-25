@@ -43,7 +43,9 @@ local gruvbox = {}
 
 function gruvbox.setup(config)
   config = config or {}
-  local cfg = apply_defaults(config, DEFAULT_CONFIG)
+  local base = gruvbox.config_cache or DEFAULT_CONFIG
+  local cfg = apply_defaults(config, base)
+  gruvbox.config_cache = cfg
 
   vim.cmd("highlight clear")
   if vim.fn.exists("syntax_on") then
