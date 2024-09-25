@@ -4,7 +4,7 @@
 
 ### Fixed
 
-- Update light bg4 colour on hard contrast to have the correct value.
+- Update light bg4 and statusline bg3 colour on hard contrast to have the correct value.
 
 ## [1.4.0] - 2024-08-16
 
