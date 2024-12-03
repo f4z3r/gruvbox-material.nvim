@@ -87,7 +87,6 @@ use 'f4z3r/gruvbox-material.nvim'
 
 [lazy](https://github.com/folke/lazy.nvim)
 
-
 ```lua
 {
   'f4z3r/gruvbox-material.nvim',
@@ -96,6 +95,24 @@ use 'f4z3r/gruvbox-material.nvim'
   priority = 1000,
   opts = {},
 },
+```
+
+[Nix package](https://search.nixos.org/packages?channel=unstable&show=vimPlugins.gruvbox-material-nvim&from=0&size=50&sort=relevance&type=packages&query=gruvbox-material-nvim)
+with [home-manager](https://github.com/nix-community/home-manager)
+
+```nix
+programs.neovim = {
+  enable = true;
+  # ...
+  plugins = with pkgs.vimPlugins; [
+    # ...
+    {
+      type = "lua";
+      plugin = gruvbox-material-nvim;
+      config = ''require('gruvbox-material').setup()'';
+    }
+  ];
+};
 ```
 
 ## Usage and Configuration
