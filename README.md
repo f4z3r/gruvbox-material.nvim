@@ -188,3 +188,20 @@ require('gruvbox-material').setup({
   end,
 })
 ```
+
+### Lualine
+
+This repository also provides a [Lualine](https://github.com/nvim-lualine/lualine.nvim/tree/master)
+compatible theme:
+
+```lua
+local theme = require("gruvbox-material.lualine").theme("medium")
+
+-- some theme customization to your liking
+-- ...
+
+require('lualine').setup {
+  options = { theme  = theme },
+}
+```
+
