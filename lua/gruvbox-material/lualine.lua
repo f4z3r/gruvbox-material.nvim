@@ -1,7 +1,7 @@
 local M = {}
 
 ---return a lualine compatible theme
----@param contrast string
+---@param contrast Contrast
 ---@return table
 function M.theme(contrast)
   local g_colors = require("gruvbox-material.colors")
