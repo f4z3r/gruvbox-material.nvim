@@ -44,26 +44,28 @@ contrasts.
 
 ## Features
 
-- Supported Plugins:
-  - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-  - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-  - [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
-  - [Nvim Tree](https://github.com/kyazdani42/nvim-tree.lua)
-  - [NERDTree](https://github.com/preservim/nerdtree)
-  - [Startify](https://github.com/mhinz/vim-startify)
-  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-  - [undotree](https://github.com/mbbill/undotree)
-  - [Vista.vim](https://github.com/liuchengxu/vista.vim)
-  - [Hop](https://github.com/phaazon/hop.nvim)
-  - [WhichKey](https://github.com/liuchengxu/vim-which-key)
-  - [indentLine](https://github.com/Yggdroot/indentLine)
-  - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-  - [nvim-notify](https://github.com/rcarriga/nvim-notify)
-  - [vim-illuminate](https://github.com/RRethy/vim-illuminate)
-  - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-  - [neorg](https://github.com/nvim-neorg/neorg)
-  - [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim/)
-  - And many other plugins you can find [here](./lua/gruvbox-material/highlights.lua#L384)
+Supported Plugins:
+
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
+- [Nvim Tree](https://github.com/kyazdani42/nvim-tree.lua)
+- [NERDTree](https://github.com/preservim/nerdtree)
+- [Startify](https://github.com/mhinz/vim-startify)
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- [undotree](https://github.com/mbbill/undotree)
+- [Vista.vim](https://github.com/liuchengxu/vista.vim)
+- [Hop](https://github.com/phaazon/hop.nvim)
+- [WhichKey](https://github.com/liuchengxu/vim-which-key)
+- [indentLine](https://github.com/Yggdroot/indentLine)
+- [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [nvim-notify](https://github.com/rcarriga/nvim-notify)
+- [vim-illuminate](https://github.com/RRethy/vim-illuminate)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [neorg](https://github.com/nvim-neorg/neorg)
+- [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim/)
+- [lualine](https://github.com/nvim-lualine/lualine.nvim/tree/master)
+- and many more ...
 
 Please feel free to open an issue if you want some features or other plugins to be included.
 
