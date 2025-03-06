@@ -37,6 +37,7 @@ contrasts.
   - [Installation](#installation)
   - [Usage and Configuration](#usage-and-configuration)
     - [Customization](#customization)
+    - [Lualine](#lualine)
 <!--toc:end-->
 
 ---
@@ -197,8 +198,11 @@ compatible theme:
 ```lua
 local theme = require("gruvbox-material.lualine").theme("medium")
 
--- some theme customization to your liking
--- ...
+-- some theme customization to your liking, for instance:
+
+-- local g_colors = require("gruvbox-material.colors")
+-- local colors = g_colors.get(vim.o.background, "medium")
+-- theme.normal["x"] = { fg = colors.bg_statusline1, bg = colors.purple }
 
 require('lualine').setup {
   options = { theme  = theme },
