@@ -151,6 +151,8 @@ function groups.get(contrast)
     PmenuSel = { fg = colors.bg3, bg = colors.grey2 }, -- selected item
     PmenuSbar = { bg = colors.bg3 }, -- scrollbar
     PmenuThumb = { bg = colors.grey0 }, -- Thumb of the scrollbar
+    PmenuKind = { fg = colors.fg1, bg = colors.bg3 },
+    PmenuExtra = { fg = colors.fg0, bg = colors.bg3 },
 
     Normal = { fg = colors.fg0, bg = colors.bg0 }, -- normal text
     NormalNC = { link = "Normal" },

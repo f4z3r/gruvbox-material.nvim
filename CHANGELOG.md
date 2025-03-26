@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Fixed
+
+- Improve pop-up menu support.
 
 ## [1.5.0] - 2025-03-06
 

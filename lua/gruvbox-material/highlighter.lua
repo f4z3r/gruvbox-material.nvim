@@ -84,6 +84,9 @@ function highlighter.build(config)
     "WarningFloat",
     "InfoFloat",
     "HintFloat",
+    "Pmenu",
+    "PmenuKind",
+    "PmenuExtra",
   })
 
   if config.background.transparent then
