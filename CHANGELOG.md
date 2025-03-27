@@ -6,6 +6,10 @@
 
 - Improve pop-up menu support.
 
+### Added
+
+- Support for `BlinkCmpKindEvent`.
+
 ## [1.5.0] - 2025-03-06
 
 ### Added
