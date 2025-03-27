@@ -798,6 +798,11 @@ function groups.get(contrast)
     Headline4 = { bg = utils.blend(colors.green, colors.bg0, 0.18) },
     Headline5 = { bg = utils.blend(colors.blue, colors.bg0, 0.18) },
     Headline6 = { bg = utils.blend(colors.purple, colors.bg0, 0.18) },
+
+    -- Trouble
+    TroubleText = { fg = colors.fg0 },
+    TroubleSource = { fg = colors.grey1 },
+    TroubleCode = { fg = colors.grey1 },
   }
 end
 
