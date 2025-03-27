@@ -8,7 +8,9 @@
 
 ### Added
 
-- Support for `BlinkCmpKindEvent`.
+- Support for `blink.cmp`.
+- Support for Navic.
+- Improved support for Trouble.
 
 ## [1.5.0] - 2025-03-06
 
