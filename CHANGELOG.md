@@ -6,7 +6,7 @@
 
 ### Fixed
 
-- Improve pop-up menu support.
+- Improve pop-up menu support to ensure consistent background colour usage.
 
 ### Added
 
