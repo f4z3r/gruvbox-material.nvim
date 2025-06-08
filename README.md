@@ -1,4 +1,22 @@
-# Gruvbox Material Scheme
+<div align="center">
+
+<a href="https://github.com/f4z3r/gruvbox-material.nvim/archive/master.zip"><img src="./assets/logo.png" alt="Gruvbox Material" width="25%"></a>
+
+# Gruvbox Material
+
+![GitHub contributors](https://img.shields.io/github/contributors-anon/f4z3r/gruvbox-material.nvim)
+![GitHub last commit](https://img.shields.io/github/last-commit/f4z3r/gruvbox-material.nvim)
+[![nixpkgs stable 25.05 package](https://repology.org/badge/version-for-repo/nix_stable_25_05/vim%3Agruvbox-material.nvim.svg)](https://repology.org/project/vim%3Agruvbox-material.nvim/versions)
+[![nixpkgs unstable package](https://repology.org/badge/version-for-repo/nix_unstable/vim%3Agruvbox-material.nvim.svg)](https://repology.org/project/vim%3Agruvbox-material.nvim/versions)
+
+### A NeoVim colour scheme in pure Lua allowing for highly flexible configuration and customization.
+
+[Features](#features) |
+[Installation](#installation) |
+[Usage and Configuration](#usage-and-configuration)
+
+<hr />
+</div>
 
 > [!NOTE]
 > This is a continuation of the original work from WittyJudge:
@@ -26,19 +44,6 @@ contrasts.
 |   Soft   |  ![](./assets/dark-soft.png)  |  ![](./assets/light-soft.png)  |
 
 </details>
-
----
-
-**Table of Contents:**
-
-<!--toc:start-->
-- [Gruvbox Material Scheme](#gruvbox-material-scheme)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage and Configuration](#usage-and-configuration)
-    - [Customization](#customization)
-    - [Lualine](#lualine)
-<!--toc:end-->
 
 ---
 
