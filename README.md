@@ -136,7 +136,7 @@ require('gruvbox-material').setup({
     italics = true,           -- enable italic comments
   },
   background = {
-    transparent = false,      -- set the background to transparent
+    transparent = false,      -- set the background to be opaque
   },
   float = {
     force_background = false, -- force background on floats even when background.transparent is set
