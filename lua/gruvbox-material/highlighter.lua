@@ -90,7 +90,7 @@ function highlighter.build(config)
       if
         background:contains(g)
         or (float:contains(g) and not config.float.force_background)
-        or (signs:contains(g) and config.signs.highlight)   -- DEPRECATED
+        or (signs:contains(g) and config.signs.highlight) -- DEPRECATED
         or (signs:contains(g) and not config.signs.force_background)
       then
         o.bg = nil
@@ -103,6 +103,15 @@ function highlighter.build(config)
     hl:add_override(function(g, o)
       if float:contains(g) then
         o.bg = config.float.background_color
+      end
+      return o
+    end)
+  end
+
+  if config.signs.background_color then
+    hl:add_override(function(g, o)
+      if signs:contains(g) then
+        o.bg = config.signs.background_color
       end
       return o
     end)
