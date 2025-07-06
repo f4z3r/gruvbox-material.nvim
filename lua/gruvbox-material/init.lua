@@ -15,7 +15,7 @@ local DEFAULT_CONFIG = {
     background_color = nil,
   },
   signs = {
-    highlight = true,
+    force_background = false,
   },
   customize = nil,
 }
@@ -39,10 +39,20 @@ local function apply_defaults(base, defaults)
   return res
 end
 
+local function warn_deprecation(config)
+  if config.signs and config.signs.highlight ~= nil then
+    utils.notify(
+      "Configuration option `signs.highlight` is deprecated. Use `signs.force_background` instead.",
+      vim.log.levels.WARN
+    )
+  end
+end
+
 local gruvbox = {}
 
 function gruvbox.setup(config)
   config = config or {}
+  warn_deprecation(config)
   local base = gruvbox.config_cache or DEFAULT_CONFIG
   local cfg = apply_defaults(config, base)
   gruvbox.config_cache = cfg

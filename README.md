@@ -144,7 +144,7 @@ require('gruvbox-material').setup({
                               -- by the color scheme
   },
   signs = {
-    highlight = true,         -- whether to highlight signs
+    force_background = false, -- whether to force background on signs
   },
   customize = nil,            -- customize the theme in any way you desire, see below what this
                               -- configuration accepts

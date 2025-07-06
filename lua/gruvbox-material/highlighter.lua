@@ -58,25 +58,6 @@ function highlighter.build(config)
     end)
   end
 
-  -- signs highlighting
-  if not config.signs.highlight then
-    local signs = utils.Set:new({
-      "RedSign",
-      "OrangeSign",
-      "YellowSign",
-      "GreenSign",
-      "AquaSign",
-      "BlueSign",
-      "PurpleSign",
-    })
-    hl:add_override(function(g, o)
-      if signs:contains(g) then
-        o.bg = nil
-      end
-      return o
-    end)
-  end
-
   -- background stuff
   local float = utils.Set:new({
     "NormalFloat",
@@ -89,16 +70,29 @@ function highlighter.build(config)
     "PmenuExtra",
   })
 
+  local signs = utils.Set:new({
+    "RedSign",
+    "OrangeSign",
+    "YellowSign",
+    "GreenSign",
+    "AquaSign",
+    "BlueSign",
+    "PurpleSign",
+  })
+
+  -- signs highlighting
   if config.background.transparent then
     local background = utils.Set:new({
       "EndOfBuffer",
       "Normal",
     })
     hl:add_override(function(g, o)
-      if config.float.force_background and float:contains(g) then
-        return o
-      end
-      if background:contains(g) or float:contains(g) then
+      if
+        background:contains(g)
+        or (float:contains(g) and not config.float.force_background)
+        or (signs:contains(g) and config.signs.highlight)   -- DEPRECATED
+        or (signs:contains(g) and not config.signs.force_background)
+      then
         o.bg = nil
       end
       return o

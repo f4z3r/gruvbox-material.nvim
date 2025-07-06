@@ -90,4 +90,26 @@ function utils.blend(top, bottom, alpha)
   return utils.rgb_to_hex(blend(1), blend(2), blend(3))
 end
 
+---notify message
+---@param msg string
+---@param level number
+---@param ... any
+function utils.notify(msg, level, ...)
+  if pcall(_G.require, "notify") == true then
+    require("notify").notify(msg:format(...), level, {
+      title = "gruvbox-material.nvim",
+      on_open = function(win)
+        vim.api.nvim_win_set_option(win, "conceallevel", 3)
+        local buf = vim.api.nvim_win_get_buf(win)
+        vim.api.nvim_buf_set_option(buf, "filetype", "markdown")
+        vim.api.nvim_win_set_option(win, "spell", false)
+      end,
+    })
+  else
+    vim.notify(msg:format(...), level, {
+      title = "gruvbox-material.nvim",
+    })
+  end
+end
+
 return utils

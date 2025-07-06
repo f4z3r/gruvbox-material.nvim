@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Removed
+
+- Deprecated `signs.highlight` in favour of `signs.force_background`.
 
 ## [1.6.0] - 2025-03-28
 
