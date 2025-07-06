@@ -1,10 +1,17 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [1.7.0] - 2025-07-06
+
+### Added
+
+- Support easy update for sign background colors using `signs.background_color` configuration option.
 
 ### Removed
 
-- Deprecated `signs.highlight` in favour of `signs.force_background`.
+- Deprecated `signs.highlight` in favour of `signs.force_background`. `signs.highlight` option
+  **will be removed** in a future release.
 
 ## [1.6.0] - 2025-03-28
 
@@ -135,7 +142,8 @@
 
 Initial version from [WittyJudge](https://github.com/WIttyJudge).
 
-[unreleased]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.6.0...HEAD
+[unreleased]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.7.0...HEAD
+[1.7.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.4.1...v1.5.0
 [1.4.1]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.4.0...v1.4.1
