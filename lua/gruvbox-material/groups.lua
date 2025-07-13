@@ -833,6 +833,9 @@ function groups.get(contrast)
     NavicIconsTypeParameter = { link = "CmpItemKindTypeParameter" },
     NavicText = { link = "CmpItemKindText" },
     NavicSeparator = { link = "CmpItemKindFile" },
+
+    -- Visual Whitespace
+    VisualNonText = { fg = colors.bg5, bg = colors.bg3 },
   }
 end
 

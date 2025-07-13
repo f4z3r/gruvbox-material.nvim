@@ -1,6 +1,11 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Added
+
+- Add support for
+  [`visual-whitespace.nvim`](https://github.com/mcauley-penney/visual-whitespace.nvim).
 
 ## [1.7.0] - 2025-07-06
 
