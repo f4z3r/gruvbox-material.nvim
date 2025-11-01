@@ -124,7 +124,8 @@ function groups.get(contrast)
 
     EndOfBuffer = { fg = colors.bg5, bg = colors.bg0 }, -- filler lines (~) after the last line in the buffer
 
-    VertSplit = { fg = colors.bg5 }, -- the column separating verti-- cally split windows
+    VertSplit = { fg = colors.bg5 }, -- the column separating vertically split windows
+    WinSeparator = { link = "VertSplit" }, -- replaces VertSplit in newer versions of Neovim
 
     Directory = { fg = colors.green }, -- directory names (and other special names in listings)
     Folded = { fg = colors.grey1, bg = colors.bg2 }, -- line used for closed folds
@@ -157,6 +158,7 @@ function groups.get(contrast)
     Normal = { fg = colors.fg0, bg = colors.bg0 }, -- normal text
     NormalNC = { link = "Normal" },
     NormalFloat = { fg = colors.fg1, bg = colors.bg3 },
+    FloatBorder = { link = "NormalFloat", fg = colors.bg5 },
 
     Question = { fg = colors.yellow }, -- hit-enter prompt and yes/no questions
 
