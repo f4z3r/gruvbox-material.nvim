@@ -10,6 +10,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Add support for visual-whitespace.nvim by @f4z3r
 - Add WinSeparator and FloatBorder by @fkretlow in [#49](https://github.com/f4z3r/gruvbox-material.nvim/pull/49)
 
+### <!-- 7 -->Miscellaneous Tasks
+- Add configuration to automatically generate changelogs by @f4z3r
+- Add changelog generation to actions by @f4z3r
+
 ### New Contributors
 * @fkretlow made their first contribution in [#49](https://github.com/f4z3r/gruvbox-material.nvim/pull/49)
 
