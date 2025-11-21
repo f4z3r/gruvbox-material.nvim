@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Add changelog generation to actions by @f4z3r
 
 ### New Contributors
+* @github-actions[bot] made their first contribution
 * @fkretlow made their first contribution in [#49](https://github.com/f4z3r/gruvbox-material.nvim/pull/49)
 
 ## [1.7.0] - 2025-07-06
