@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### <!-- 7 -->Miscellaneous Tasks
+- Trigger changelog action on tag pushes by @f4z3r
+
+## [1.8.0] - 2025-12-15
+
 ### <!-- 0 -->Features
 - Add support for visual-whitespace.nvim by @f4z3r
 - Add WinSeparator and FloatBorder by @fkretlow in [#49](https://github.com/f4z3r/gruvbox-material.nvim/pull/49)
@@ -235,6 +240,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 * @logan-connolly made their first contribution
 
 [unreleased]: https://github.com/f4z3r/gruvbox-material.nvim
+[1.8.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.4.1...v1.5.0
