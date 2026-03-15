@@ -13,7 +13,8 @@
 
 [Features](#features) |
 [Installation](#installation) |
-[Usage and Configuration](#usage-and-configuration)
+[Usage and Configuration](#usage-and-configuration) |
+[API Reference](./docs/api.md)
 
 <hr />
 </div>
@@ -125,6 +126,8 @@ programs.neovim = {
 
 ## Usage and Configuration
 
+For detailed API documentation, see [API Reference](./docs/api.md).
+
 Load the color scheme and define the desired options:
 
 ```lua
@@ -186,6 +189,7 @@ line number to a bold orange instead of the default grey:
 
 ```lua
 -- get colors from the colorscheme for current background and "medium" contrast
+-- See ./docs/api.md for full list of available colors
 local colors = require("gruvbox-material.colors").get(vim.o.background, "medium")
 
 require('gruvbox-material').setup({
