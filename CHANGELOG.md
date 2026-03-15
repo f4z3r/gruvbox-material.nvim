@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### <!-- 3 -->Documentation
+- Add API documentation for easier use by @f4z3r
+
 ### <!-- 7 -->Miscellaneous Tasks
 - Trigger changelog action on tag pushes by @f4z3r
 
