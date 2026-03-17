@@ -179,6 +179,9 @@ function groups.get(contrast)
     VisualNOS = { link = "Visual" }, -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
     WildMenu = { link = "PmenuSel" }, --  current match in 'wildmenu' completion
 
+    WinBar = { link = "Statusline" }, -- Window Bar
+    WinBarNC = { link = "StatuslineNC" }, -- Window Bar for non-current window
+
     -------------------------
     -- Specific for neovim --
     -------------------------
