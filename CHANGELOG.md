@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.8.1] - 2026-03-31
 
 ### <!-- 0 -->Features
 - Add winbar groups by @f4z3r in [#60](https://github.com/f4z3r/gruvbox-material.nvim/pull/60)
@@ -245,7 +245,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 * @WIttyJudge made their first contribution
 * @logan-connolly made their first contribution
 
-[unreleased]: https://github.com/f4z3r/gruvbox-material.nvim
+[1.8.1]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.8.0...v1.8.1
 [1.8.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.5.0...v1.6.0
