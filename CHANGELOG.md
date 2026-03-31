@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+### <!-- 0 -->Features
+- Add winbar groups by @f4z3r in [#60](https://github.com/f4z3r/gruvbox-material.nvim/pull/60)
+
 ### <!-- 3 -->Documentation
 - Add API documentation for easier use by @f4z3r
 
