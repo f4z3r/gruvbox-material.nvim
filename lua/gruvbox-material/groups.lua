@@ -68,38 +68,39 @@ function groups.get(contrast)
     BlueSign = { fg = colors.blue, bg = colors.bg2 },
     PurpleSign = { fg = colors.purple, bg = colors.bg2 },
 
-    Type = { fg = colors.yellow }, -- int, long, char, etc.
-    Typedef = { fg = colors.red }, -- A typedef
-    StorageClass = { fg = colors.orange }, -- static, register, volatile, etc.
-    Structure = { fg = colors.orange }, -- struct, union, enum, etc.
-    Constant = { fg = colors.aqua }, -- any constant
-    Character = { fg = colors.green }, -- any character constant: 'c', '\n'
-    Number = { fg = colors.purple }, -- a number constant: 5
     Boolean = { fg = colors.purple }, -- a boolean constant: TRUE, false
-    Float = { fg = colors.purple }, -- a floating point constant: 2.3e10
-    Statement = { fg = colors.red }, -- any statement
-    Label = { fg = colors.orange }, -- case, default, etc.
-    Operator = { fg = colors.orange }, -- sizeof", "+", "*", etc.
-    Exception = { fg = colors.red }, -- try, catch, throw
-    PreProc = { fg = colors.purple }, -- generic Preprocessor
-    Include = { fg = colors.purple }, -- preprocessor #include
+    Character = { fg = colors.green }, -- any character constant: 'c', '\n'
+    Constant = { fg = colors.aqua }, -- any constant
+    Debug = { fg = colors.orange }, -- debugging statements
     Define = { fg = colors.purple }, -- preprocessor #define
+    Delimiter = { fg = colors.fg0 }, -- character that needs attention like , or .
+    Exception = { fg = colors.red }, -- try, catch, throw
+    Float = { fg = colors.purple }, -- a floating point constant: 2.3e10
+    Function = { fg = colors.green }, -- special character in a constant
     Identifier = { fg = colors.blue },
+    Ignore = { fg = colors.grey1 }, -- left blank, hidden
+    Include = { fg = colors.purple }, -- preprocessor #include
+    Label = { fg = colors.orange }, -- case, default, etc.
     Macro = { fg = colors.aqua }, -- same as Define
+    Number = { fg = colors.purple }, -- a number constant: 5
+    Operator = { fg = colors.orange }, -- sizeof", "+", "*", etc.
     PreCondit = { fg = colors.purple }, -- preprocessor #if, #else, #endif, etc.
+    PreProc = { fg = colors.purple }, -- generic Preprocessor
+    QuickFixLine = { fg = colors.purple, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Special = { fg = colors.yellow }, -- any special symbol
     SpecialChar = { fg = colors.yellow }, -- special character in a constant
-    Function = { fg = colors.green }, -- special character in a constant
+    Statement = { fg = colors.red }, -- any statement
+    StorageClass = { fg = colors.orange }, -- static, register, volatile, etc.
+    String = { fg = colors.aqua },
+    Structure = { fg = colors.orange }, -- struct, union, enum, etc.
     Tag = { fg = colors.orange }, -- you can use CTRL-] on this
-    Delimiter = { fg = colors.fg0 }, -- character that needs attention like , or .
-    QuickFixLine = { fg = colors.purple, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Debug = { fg = colors.orange }, -- debugging statements
+    ToolbarButton = { fg = colors.fg0, bg = colors.grey2 },
+    ToolbarLine = { fg = colors.fg1, bg = colors.bg3 },
+    Type = { fg = colors.yellow }, -- int, long, char, etc.
+    Typedef = { fg = colors.red }, -- A typedef
+    Underlined = { fg = colors.blue, underline = true }, -- text that stands out, HTML links
     debucPC = { fg = colors.bg0, bg = colors.green }, -- the current position
     debugBreakpoint = { fg = colors.bg0 }, -- a breakpoint
-    ToolbarLine = { fg = colors.fg1, bg = colors.bg3 },
-    ToolbarButton = { fg = colors.fg0, bg = colors.grey2 },
-    Underlined = { fg = colors.blue, underline = true }, -- text that stands out, HTML links
-    Ignore = { fg = colors.grey1 }, -- left blank, hidden
 
     Comment = { fg = colors.grey1, italic = true }, -- any comments
     SpecialComment = { fg = colors.grey1, italic = true }, -- special things inside a comment
