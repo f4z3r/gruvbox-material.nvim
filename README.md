@@ -6,8 +6,6 @@
 
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/f4z3r/gruvbox-material.nvim)
 ![GitHub last commit](https://img.shields.io/github/last-commit/f4z3r/gruvbox-material.nvim)
-[![nixpkgs stable 25.05 package](https://repology.org/badge/version-for-repo/nix_stable_25_05/vim%3Agruvbox-material.nvim.svg)](https://repology.org/project/vim%3Agruvbox-material.nvim/versions)
-[![nixpkgs unstable package](https://repology.org/badge/version-for-repo/nix_unstable/vim%3Agruvbox-material.nvim.svg)](https://repology.org/project/vim%3Agruvbox-material.nvim/versions)
 
 ### A NeoVim colour scheme in pure Lua allowing for highly flexible configuration and customization.
 
@@ -76,6 +74,8 @@ Supported Plugins:
 Please feel free to open an issue if you want some features or other plugins to be included.
 
 ## Installation
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/vim%3Agruvbox-material.nvim.svg)](https://repology.org/project/vim%3Agruvbox-material.nvim/versions)
 
 > [!NOTE]
 > This plugin requires Neovim >= 0.5.0
