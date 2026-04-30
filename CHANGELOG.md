@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### <!-- 3 -->Documentation
+- Improve packaging status on README by @f4z3r
+
 ## [1.8.2] - 2026-04-19
 
 ### <!-- 1 -->Bug Fixes
@@ -250,6 +255,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 * @WIttyJudge made their first contribution
 * @logan-connolly made their first contribution
 
+[unreleased]: https://github.com/f4z3r/gruvbox-material.nvim
 [1.8.2]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.8.1...v1.8.2
 [1.8.1]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.8.0...v1.8.1
 [1.8.0]: https://github.com/f4z3r/gruvbox-material.nvim/compare/v1.7.0...v1.8.0
